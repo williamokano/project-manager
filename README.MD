@@ -8,3 +8,5 @@ You can set tags, users and time to determine how long a task should be done.
 Inspired on the clockingit website.
 
 Feel free to contribute.
+
+BETA - Still in development
