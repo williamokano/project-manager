@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91120073-B387-4DB2-BFA2-AB29360DC4AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Katapoka.BLL</RootNamespace>
+    <AssemblyName>Katapoka.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Entity.Design" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractBLLContext.cs" />
+    <Compile Include="AbstractBLLPersistence.cs" />
+    <Compile Include="AbstractBLLModel.cs" />
+    <Compile Include="Atividade\AtividadeUsuarioBLL.cs" />
+    <Compile Include="Atividade\TipoAtividadeBLL.cs" />
+    <Compile Include="Autenticacao\Usuario.cs" />
+    <Compile Include="Constantes.cs" />
+    <Compile Include="Empresa\AreaAtuacaoBLL.cs" />
+    <Compile Include="Empresa\ContatoBLL.cs" />
+    <Compile Include="Empresa\EmpresaBLL.cs" />
+    <Compile Include="Atividade\AtividadeBLL.cs" />
+    <Compile Include="Projeto\ProjetoBLL.cs" />
+    <Compile Include="Projeto\TipoProjetoBLL.cs" />
+    <Compile Include="Projeto\TipoProjetoTipoAtividadeBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regiao\BairroBLL.cs" />
+    <Compile Include="Regiao\CidadeBLL.cs" />
+    <Compile Include="Regiao\EnderecoBLL.cs" />
+    <Compile Include="Regiao\UFBLL.cs" />
+    <Compile Include="Tag\AtividadeTagBLL.cs" />
+    <Compile Include="Tag\TagBLL.cs" />
+    <Compile Include="Tag\TipoAtividadeTagBLL.cs" />
+    <Compile Include="Usuario\CargoBLL.cs" />
+    <Compile Include="Usuario\UsuarioBLL.cs" />
+    <Compile Include="Usuario\UsuarioNivelBLL.cs" />
+    <Compile Include="Utilitarios\Criptografia.cs" />
+    <Compile Include="Utilitarios\Utilitario.cs" />
+    <Compile Include="Utilitarios\Validacao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Katapoka.DAO\Katapoka.DAO.csproj">
+      <Project>{982cf39a-707c-4c63-a473-fd714c5e508d}</Project>
+      <Name>Katapoka.DAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,2108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Katapoka.DAO.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="QuanticaDAOStoreContainer">
+          <EntitySet Name="AreaAtuacao_Tb" EntityType="Katapoka.DAO.Store.AreaAtuacao_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Atividade_Tb" EntityType="Katapoka.DAO.Store.Atividade_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AtividadeApontamentoTempo_Tb" EntityType="Katapoka.DAO.Store.AtividadeApontamentoTempo_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AtividadeLog_Tb" EntityType="Katapoka.DAO.Store.AtividadeLog_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AtividadeTag_Tb" EntityType="Katapoka.DAO.Store.AtividadeTag_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AtividadeUsuario_Tb" EntityType="Katapoka.DAO.Store.AtividadeUsuario_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Bairro_Tb" EntityType="Katapoka.DAO.Store.Bairro_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cargo_Tb" EntityType="Katapoka.DAO.Store.Cargo_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CargoTipoAtividade_Tb" EntityType="Katapoka.DAO.Store.CargoTipoAtividade_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cidade_Tb" EntityType="Katapoka.DAO.Store.Cidade_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contato_Tb" EntityType="Katapoka.DAO.Store.Contato_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Empresa_Tb" EntityType="Katapoka.DAO.Store.Empresa_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Endereco_Tb" EntityType="Katapoka.DAO.Store.Endereco_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Projeto_Tb" EntityType="Katapoka.DAO.Store.Projeto_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProjetoInteracao_Tb" EntityType="Katapoka.DAO.Store.ProjetoInteracao_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="Katapoka.DAO.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tag_Tb" EntityType="Katapoka.DAO.Store.Tag_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoAtividade_Tb" EntityType="Katapoka.DAO.Store.TipoAtividade_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoAtividadeTag_Tb" EntityType="Katapoka.DAO.Store.TipoAtividadeTag_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoProjeto_Tb" EntityType="Katapoka.DAO.Store.TipoProjeto_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoProjetoTipoAtividade_Tb" EntityType="Katapoka.DAO.Store.TipoProjetoTipoAtividade_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoProjetoTipoAtividadePredecessora_Tb" EntityType="Katapoka.DAO.Store.TipoProjetoTipoAtividadePredecessora_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UF_Tb" EntityType="Katapoka.DAO.Store.UF_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario_Tb" EntityType="Katapoka.DAO.Store.Usuario_Tb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsuarioNivel_Tb" EntityType="Katapoka.DAO.Store.UsuarioNivel_Tb" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Atividade_Tb_Atividade_Tb" Association="Katapoka.DAO.Store.FK_Atividade_Tb_Atividade_Tb">
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+            <End Role="Atividade_Tb1" EntitySet="Atividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Atividade_Tb_Projeto_Tb" Association="Katapoka.DAO.Store.FK_Atividade_Tb_Projeto_Tb">
+            <End Role="Projeto_Tb" EntitySet="Projeto_Tb" />
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Atividade_Tb_TipoAtividade_Tb" Association="Katapoka.DAO.Store.FK_Atividade_Tb_TipoAtividade_Tb">
+            <End Role="TipoAtividade_Tb" EntitySet="TipoAtividade_Tb" />
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AtividadeApontamentoTempo_Tb_Usuario_Tb" Association="Katapoka.DAO.Store.FK_AtividadeApontamentoTempo_Tb_Usuario_Tb">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="AtividadeApontamentoTempo_Tb" EntitySet="AtividadeApontamentoTempo_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AtividadeTag_Tb_Atividade_Tb" Association="Katapoka.DAO.Store.FK_AtividadeTag_Tb_Atividade_Tb">
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+            <End Role="AtividadeTag_Tb" EntitySet="AtividadeTag_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AtividadeTag_Tb_Tag_Tb" Association="Katapoka.DAO.Store.FK_AtividadeTag_Tb_Tag_Tb">
+            <End Role="Tag_Tb" EntitySet="Tag_Tb" />
+            <End Role="AtividadeTag_Tb" EntitySet="AtividadeTag_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Bairro_Cidade" Association="Katapoka.DAO.Store.Fk_Bairro_Cidade">
+            <End Role="Cidade_Tb" EntitySet="Cidade_Tb" />
+            <End Role="Bairro_Tb" EntitySet="Bairro_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CargoTipoAtividade_Tb_Cargo_Tb" Association="Katapoka.DAO.Store.FK_CargoTipoAtividade_Tb_Cargo_Tb">
+            <End Role="Cargo_Tb" EntitySet="Cargo_Tb" />
+            <End Role="CargoTipoAtividade_Tb" EntitySet="CargoTipoAtividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CargoTipoAtividade_Tb_TipoAtividade_Tb" Association="Katapoka.DAO.Store.FK_CargoTipoAtividade_Tb_TipoAtividade_Tb">
+            <End Role="TipoAtividade_Tb" EntitySet="TipoAtividade_Tb" />
+            <End Role="CargoTipoAtividade_Tb" EntitySet="CargoTipoAtividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Cidade_UF" Association="Katapoka.DAO.Store.Fk_Cidade_UF">
+            <End Role="UF_Tb" EntitySet="UF_Tb" />
+            <End Role="Cidade_Tb" EntitySet="Cidade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Empresa_AreaAtuacao" Association="Katapoka.DAO.Store.Fk_Empresa_AreaAtuacao">
+            <End Role="AreaAtuacao_Tb" EntitySet="AreaAtuacao_Tb" />
+            <End Role="Empresa_Tb" EntitySet="Empresa_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Empresa_Contato" Association="Katapoka.DAO.Store.Fk_Empresa_Contato">
+            <End Role="Contato_Tb" EntitySet="Contato_Tb" />
+            <End Role="Empresa_Tb" EntitySet="Empresa_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Empresa_Endereco" Association="Katapoka.DAO.Store.Fk_Empresa_Endereco">
+            <End Role="Endereco_Tb" EntitySet="Endereco_Tb" />
+            <End Role="Empresa_Tb" EntitySet="Empresa_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Empresa_UsuarioAprovacao" Association="Katapoka.DAO.Store.Fk_Empresa_UsuarioAprovacao">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="Empresa_Tb" EntitySet="Empresa_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Endereco_Bairro" Association="Katapoka.DAO.Store.Fk_Endereco_Bairro">
+            <End Role="Bairro_Tb" EntitySet="Bairro_Tb" />
+            <End Role="Endereco_Tb" EntitySet="Endereco_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Endereco_Cidade" Association="Katapoka.DAO.Store.Fk_Endereco_Cidade">
+            <End Role="Cidade_Tb" EntitySet="Cidade_Tb" />
+            <End Role="Endereco_Tb" EntitySet="Endereco_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Projeto_Empresa" Association="Katapoka.DAO.Store.Fk_Projeto_Empresa">
+            <End Role="Empresa_Tb" EntitySet="Empresa_Tb" />
+            <End Role="Projeto_Tb" EntitySet="Projeto_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Projeto_Tb_TipoProjeto_Tb" Association="Katapoka.DAO.Store.FK_Projeto_Tb_TipoProjeto_Tb">
+            <End Role="TipoProjeto_Tb" EntitySet="TipoProjeto_Tb" />
+            <End Role="Projeto_Tb" EntitySet="Projeto_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Projeto_UsuarioCriacao" Association="Katapoka.DAO.Store.Fk_Projeto_UsuarioCriacao">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="Projeto_Tb" EntitySet="Projeto_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ProjetoAtividade_UsuarioCriacao" Association="Katapoka.DAO.Store.Fk_ProjetoAtividade_UsuarioCriacao">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ProjetoAtividade_Usuarios" Association="Katapoka.DAO.Store.Fk_ProjetoAtividade_Usuarios">
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+            <End Role="AtividadeUsuario_Tb" EntitySet="AtividadeUsuario_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProjetoAtividadeHistorico" Association="Katapoka.DAO.Store.FK_ProjetoAtividadeHistorico">
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+            <End Role="AtividadeLog_Tb" EntitySet="AtividadeLog_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ProjetoAtividadeUsuario_Usuario" Association="Katapoka.DAO.Store.Fk_ProjetoAtividadeUsuario_Usuario">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="AtividadeUsuario_Tb" EntitySet="AtividadeUsuario_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ProjetoAtividadeUsuario_UsuarioCriacao" Association="Katapoka.DAO.Store.Fk_ProjetoAtividadeUsuario_UsuarioCriacao">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="AtividadeUsuario_Tb" EntitySet="AtividadeUsuario_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProjetoHistorico_Tb_Projeto_Tb" Association="Katapoka.DAO.Store.FK_ProjetoHistorico_Tb_Projeto_Tb">
+            <End Role="Projeto_Tb" EntitySet="Projeto_Tb" />
+            <End Role="ProjetoInteracao_Tb" EntitySet="ProjetoInteracao_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProjetoHistorico_Tb_Usuario_Tb" Association="Katapoka.DAO.Store.FK_ProjetoHistorico_Tb_Usuario_Tb">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="ProjetoInteracao_Tb" EntitySet="ProjetoInteracao_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Tempo_Atividade" Association="Katapoka.DAO.Store.Fk_Tempo_Atividade">
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+            <End Role="AtividadeApontamentoTempo_Tb" EntitySet="AtividadeApontamentoTempo_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoAtividadeTag_Tb_Tag_Tb" Association="Katapoka.DAO.Store.FK_TipoAtividadeTag_Tb_Tag_Tb">
+            <End Role="Tag_Tb" EntitySet="Tag_Tb" />
+            <End Role="TipoAtividadeTag_Tb" EntitySet="TipoAtividadeTag_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoAtividadeTag_Tb_TipoAtividade_Tb" Association="Katapoka.DAO.Store.FK_TipoAtividadeTag_Tb_TipoAtividade_Tb">
+            <End Role="TipoAtividade_Tb" EntitySet="TipoAtividade_Tb" />
+            <End Role="TipoAtividadeTag_Tb" EntitySet="TipoAtividadeTag_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoProjetoTipoAtividade_Tb_TipoAtividade_Tb" Association="Katapoka.DAO.Store.FK_TipoProjetoTipoAtividade_Tb_TipoAtividade_Tb">
+            <End Role="TipoAtividade_Tb" EntitySet="TipoAtividade_Tb" />
+            <End Role="TipoProjetoTipoAtividade_Tb" EntitySet="TipoProjetoTipoAtividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoProjetoTipoAtividade_Tb_TipoProjeto_Tb" Association="Katapoka.DAO.Store.FK_TipoProjetoTipoAtividade_Tb_TipoProjeto_Tb">
+            <End Role="TipoProjeto_Tb" EntitySet="TipoProjeto_Tb" />
+            <End Role="TipoProjetoTipoAtividade_Tb" EntitySet="TipoProjetoTipoAtividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb" Association="Katapoka.DAO.Store.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb">
+            <End Role="TipoAtividade_Tb" EntitySet="TipoAtividade_Tb" />
+            <End Role="TipoProjetoTipoAtividadePredecessora_Tb" EntitySet="TipoProjetoTipoAtividadePredecessora_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb1" Association="Katapoka.DAO.Store.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb1">
+            <End Role="TipoAtividade_Tb" EntitySet="TipoAtividade_Tb" />
+            <End Role="TipoProjetoTipoAtividadePredecessora_Tb" EntitySet="TipoProjetoTipoAtividadePredecessora_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoProjeto_Tb" Association="Katapoka.DAO.Store.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoProjeto_Tb">
+            <End Role="TipoProjeto_Tb" EntitySet="TipoProjeto_Tb" />
+            <End Role="TipoProjetoTipoAtividadePredecessora_Tb" EntitySet="TipoProjetoTipoAtividadePredecessora_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Tb_Cargo_Tb" Association="Katapoka.DAO.Store.FK_Usuario_Tb_Cargo_Tb">
+            <End Role="Cargo_Tb" EntitySet="Cargo_Tb" />
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Usuario_UsuarioNivel" Association="Katapoka.DAO.Store.Fk_Usuario_UsuarioNivel">
+            <End Role="UsuarioNivel_Tb" EntitySet="UsuarioNivel_Tb" />
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AreaAtuacao_Tb">
+          <Key>
+            <PropertyRef Name="IdAreaAtuacao" />
+          </Key>
+          <Property Name="IdAreaAtuacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DsAreaAtuacao" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Atividade_Tb">
+          <Key>
+            <PropertyRef Name="IdAtividade" />
+          </Key>
+          <Property Name="IdAtividade" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdProjeto" Type="int" Nullable="false" />
+          <Property Name="DsTituloAtividade" Type="varchar" MaxLength="200" />
+          <Property Name="QtTempoEstimado" Type="decimal" Precision="10" Scale="3" />
+          <Property Name="QtTempoExecutado" Type="decimal" Nullable="false" Precision="10" Scale="3" />
+          <Property Name="VrCompletoPorcentagem" Type="decimal" Precision="3" />
+          <Property Name="DtInicio" Type="datetime" />
+          <Property Name="DtTermino" Type="datetime" />
+          <Property Name="DsAtividade" Type="text" />
+          <Property Name="IdUsuarioCriacao" Type="int" Nullable="false" />
+          <Property Name="DtCriacao" Type="datetime" Nullable="false" />
+          <Property Name="IdTipoAtividade" Type="int" />
+          <Property Name="IdAtividadePredecessora" Type="int" />
+          <Property Name="FlStatus" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="AtividadeApontamentoTempo_Tb">
+          <Key>
+            <PropertyRef Name="IdAtividadeApontamentoTempo" />
+          </Key>
+          <Property Name="IdAtividadeApontamentoTempo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
+          <Property Name="IdAtividade" Type="int" Nullable="false" />
+          <Property Name="DtInicio" Type="datetime" Nullable="false" />
+          <Property Name="DtTermino" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AtividadeLog_Tb">
+          <Key>
+            <PropertyRef Name="IdAtividadeLog" />
+          </Key>
+          <Property Name="IdAtividadeLog" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdAtividade" Type="int" Nullable="false" />
+          <Property Name="DtInicioAntigo" Type="datetime" Nullable="false" />
+          <Property Name="DtTerminoAntigo" Type="datetime" Nullable="false" />
+          <Property Name="DtInicioNovo" Type="datetime" Nullable="false" />
+          <Property Name="DtTerminoNovo" Type="datetime" Nullable="false" />
+          <Property Name="DsMotivo" Type="varchar" MaxLength="200" />
+          <Property Name="IdUsuarioAlteracao" Type="int" Nullable="false" />
+          <Property Name="DtAlteracao" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AtividadeTag_Tb">
+          <Key>
+            <PropertyRef Name="IdAtividadeTag" />
+          </Key>
+          <Property Name="IdAtividadeTag" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdAtividade" Type="int" Nullable="false" />
+          <Property Name="IdTag" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AtividadeUsuario_Tb">
+          <Key>
+            <PropertyRef Name="IdAtividadeUsuario" />
+          </Key>
+          <Property Name="IdAtividadeUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdAtividade" Type="int" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
+          <Property Name="IdUsuarioCriacao" Type="int" Nullable="false" />
+          <Property Name="DtCriacao" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bairro_Tb">
+          <Key>
+            <PropertyRef Name="IdBairro" />
+          </Key>
+          <Property Name="IdBairro" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdCidade" Type="int" Nullable="false" />
+          <Property Name="DsNome" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Cargo_Tb">
+          <Key>
+            <PropertyRef Name="IdCargo" />
+          </Key>
+          <Property Name="IdCargo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DsCargo" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CargoTipoAtividade_Tb">
+          <Key>
+            <PropertyRef Name="IdCargoTipoAtividade" />
+          </Key>
+          <Property Name="IdCargoTipoAtividade" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdCargo" Type="int" Nullable="false" />
+          <Property Name="IdTipoAtividade" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cidade_Tb">
+          <Key>
+            <PropertyRef Name="IdCidade" />
+          </Key>
+          <Property Name="IdCidade" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CdUF" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="DsNome" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Contato_Tb">
+          <Key>
+            <PropertyRef Name="IdContato" />
+          </Key>
+          <Property Name="IdContato" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DsTelefoneResidencial" Type="varchar" MaxLength="16" />
+          <Property Name="DsTelefoneCelular" Type="varchar" MaxLength="16" />
+          <Property Name="DsTelefoneComercial" Type="varchar" MaxLength="16" />
+          <Property Name="DsFax" Type="varchar" MaxLength="16" />
+          <Property Name="DsObservacaoContato" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Empresa_Tb">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEndereco" Type="int" Nullable="false" />
+          <Property Name="IdContato" Type="int" Nullable="false" />
+          <Property Name="IdAreaAtuacao" Type="int" Nullable="false" />
+          <Property Name="DsNomeFantasia" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="DsRazaoSocial" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="NrCnpj" Type="varchar" Nullable="false" MaxLength="18" />
+          <Property Name="DsEmail" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="DsSumarioEmpresa" Type="varchar" MaxLength="200" />
+          <Property Name="FlAceiteTermo" Type="bit" Nullable="false" />
+          <Property Name="DsSite" Type="varchar" MaxLength="150" />
+          <Property Name="DtCadastro" Type="datetime" Nullable="false" />
+          <Property Name="FlAprovada" Type="bit" Nullable="false" />
+          <Property Name="DtAprovacao" Type="datetime" />
+          <Property Name="IdUsuarioAprovacao" Type="int" />
+          <Property Name="DsMotivoRejeicao" Type="nvarchar" MaxLength="500" />
+          <Property Name="Logo" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Endereco_Tb">
+          <Key>
+            <PropertyRef Name="IdEndereco" />
+          </Key>
+          <Property Name="IdEndereco" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NrCep" Type="varchar" MaxLength="10" />
+          <Property Name="DsEndereco" Type="varchar" MaxLength="200" />
+          <Property Name="NrEndereco" Type="varchar" MaxLength="20" />
+          <Property Name="DsComplemento" Type="varchar" MaxLength="50" />
+          <Property Name="IdBairro" Type="int" />
+          <Property Name="IdCidade" Type="int" />
+          <Property Name="DsBairroOutro" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Projeto_Tb">
+          <Key>
+            <PropertyRef Name="IdProjeto" />
+          </Key>
+          <Property Name="IdProjeto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdTipoProjeto" Type="int" Nullable="false" />
+          <Property Name="DsNome" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="DtInicioEstimado" Type="datetime" />
+          <Property Name="DtTerminoEstimado" Type="datetime" />
+          <Property Name="DsCodigoReferencia" Type="varchar" MaxLength="20" />
+          <Property Name="FlStatus" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="IdUsuarioCriacao" Type="int" Nullable="false" />
+          <Property Name="DtCriacao" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProjetoInteracao_Tb">
+          <Key>
+            <PropertyRef Name="IdProjetoInteracao" />
+          </Key>
+          <Property Name="IdProjetoInteracao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdProjeto" Type="int" Nullable="false" />
+          <Property Name="DsHistorico" Type="text" Nullable="false" />
+          <Property Name="DtCriacao" Type="datetime" Nullable="false" />
+          <Property Name="IdUsuarioCriacao" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tag_Tb">
+          <Key>
+            <PropertyRef Name="IdTag" />
+          </Key>
+          <Property Name="IdTag" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DsTag" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TipoAtividade_Tb">
+          <Key>
+            <PropertyRef Name="IdTipoAtividade" />
+          </Key>
+          <Property Name="IdTipoAtividade" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DsTituloAtividade" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="QtTempoEstimado" Type="decimal" Nullable="false" Precision="10" Scale="3" />
+          <Property Name="DsAtividade" Type="text" />
+        </EntityType>
+        <EntityType Name="TipoAtividadeTag_Tb">
+          <Key>
+            <PropertyRef Name="IdTipoAtividadeTag" />
+          </Key>
+          <Property Name="IdTipoAtividadeTag" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdTipoAtividade" Type="int" Nullable="false" />
+          <Property Name="IdTag" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoProjeto_Tb">
+          <Key>
+            <PropertyRef Name="IdTipoProjeto" />
+          </Key>
+          <Property Name="IdTipoProjeto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DsTipo" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TipoProjetoTipoAtividade_Tb">
+          <Key>
+            <PropertyRef Name="IdTipoProjetoTipoAtividade" />
+          </Key>
+          <Property Name="IdTipoProjetoTipoAtividade" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdTipoProjeto" Type="int" Nullable="false" />
+          <Property Name="IdTipoAtividade" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoProjetoTipoAtividadePredecessora_Tb">
+          <Key>
+            <PropertyRef Name="IdTipoProjetoTipoAtividadePredecessora" />
+          </Key>
+          <Property Name="IdTipoProjetoTipoAtividadePredecessora" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdTipoProjeto" Type="int" Nullable="false" />
+          <Property Name="IdTipoAtividade" Type="int" Nullable="false" />
+          <Property Name="IdTipoAtividadePredecessora" Type="int" />
+        </EntityType>
+        <EntityType Name="UF_Tb">
+          <Key>
+            <PropertyRef Name="CdUF" />
+          </Key>
+          <Property Name="CdUF" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="DsUF" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Usuario_Tb">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdUsuarioNivel" Type="int" Nullable="false" />
+          <Property Name="DsNome" Type="varchar" MaxLength="200" />
+          <Property Name="DsEmail" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="DtValidadeLogin" Type="datetime" />
+          <Property Name="DsHashLogin" Type="varchar(max)" />
+          <Property Name="DsSenha" Type="nvarchar" MaxLength="250" />
+          <Property Name="IdCargo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsuarioNivel_Tb">
+          <Key>
+            <PropertyRef Name="IdUsuarioNivel" />
+          </Key>
+          <Property Name="IdUsuarioNivel" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DsNivel" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <Association Name="FK_Atividade_Tb_Atividade_Tb">
+          <End Role="Atividade_Tb" Type="Katapoka.DAO.Store.Atividade_Tb" Multiplicity="0..1" />
+          <End Role="Atividade_Tb1" Type="Katapoka.DAO.Store.Atividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atividade_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Principal>
+            <Dependent Role="Atividade_Tb1">
+              <PropertyRef Name="IdAtividadePredecessora" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Atividade_Tb_Projeto_Tb">
+          <End Role="Projeto_Tb" Type="Katapoka.DAO.Store.Projeto_Tb" Multiplicity="1" />
+          <End Role="Atividade_Tb" Type="Katapoka.DAO.Store.Atividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projeto_Tb">
+              <PropertyRef Name="IdProjeto" />
+            </Principal>
+            <Dependent Role="Atividade_Tb">
+              <PropertyRef Name="IdProjeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Atividade_Tb_TipoAtividade_Tb">
+          <End Role="TipoAtividade_Tb" Type="Katapoka.DAO.Store.TipoAtividade_Tb" Multiplicity="0..1" />
+          <End Role="Atividade_Tb" Type="Katapoka.DAO.Store.Atividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Principal>
+            <Dependent Role="Atividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AtividadeApontamentoTempo_Tb_Usuario_Tb">
+          <End Role="Usuario_Tb" Type="Katapoka.DAO.Store.Usuario_Tb" Multiplicity="1" />
+          <End Role="AtividadeApontamentoTempo_Tb" Type="Katapoka.DAO.Store.AtividadeApontamentoTempo_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="AtividadeApontamentoTempo_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AtividadeTag_Tb_Atividade_Tb">
+          <End Role="Atividade_Tb" Type="Katapoka.DAO.Store.Atividade_Tb" Multiplicity="1" />
+          <End Role="AtividadeTag_Tb" Type="Katapoka.DAO.Store.AtividadeTag_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atividade_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Principal>
+            <Dependent Role="AtividadeTag_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AtividadeTag_Tb_Tag_Tb">
+          <End Role="Tag_Tb" Type="Katapoka.DAO.Store.Tag_Tb" Multiplicity="1" />
+          <End Role="AtividadeTag_Tb" Type="Katapoka.DAO.Store.AtividadeTag_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tag_Tb">
+              <PropertyRef Name="IdTag" />
+            </Principal>
+            <Dependent Role="AtividadeTag_Tb">
+              <PropertyRef Name="IdTag" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Bairro_Cidade">
+          <End Role="Cidade_Tb" Type="Katapoka.DAO.Store.Cidade_Tb" Multiplicity="1" />
+          <End Role="Bairro_Tb" Type="Katapoka.DAO.Store.Bairro_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cidade_Tb">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="Bairro_Tb">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CargoTipoAtividade_Tb_Cargo_Tb">
+          <End Role="Cargo_Tb" Type="Katapoka.DAO.Store.Cargo_Tb" Multiplicity="1" />
+          <End Role="CargoTipoAtividade_Tb" Type="Katapoka.DAO.Store.CargoTipoAtividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo_Tb">
+              <PropertyRef Name="IdCargo" />
+            </Principal>
+            <Dependent Role="CargoTipoAtividade_Tb">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CargoTipoAtividade_Tb_TipoAtividade_Tb">
+          <End Role="TipoAtividade_Tb" Type="Katapoka.DAO.Store.TipoAtividade_Tb" Multiplicity="1" />
+          <End Role="CargoTipoAtividade_Tb" Type="Katapoka.DAO.Store.CargoTipoAtividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Principal>
+            <Dependent Role="CargoTipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Cidade_UF">
+          <End Role="UF_Tb" Type="Katapoka.DAO.Store.UF_Tb" Multiplicity="1" />
+          <End Role="Cidade_Tb" Type="Katapoka.DAO.Store.Cidade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UF_Tb">
+              <PropertyRef Name="CdUF" />
+            </Principal>
+            <Dependent Role="Cidade_Tb">
+              <PropertyRef Name="CdUF" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Empresa_AreaAtuacao">
+          <End Role="AreaAtuacao_Tb" Type="Katapoka.DAO.Store.AreaAtuacao_Tb" Multiplicity="1" />
+          <End Role="Empresa_Tb" Type="Katapoka.DAO.Store.Empresa_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AreaAtuacao_Tb">
+              <PropertyRef Name="IdAreaAtuacao" />
+            </Principal>
+            <Dependent Role="Empresa_Tb">
+              <PropertyRef Name="IdAreaAtuacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Empresa_Contato">
+          <End Role="Contato_Tb" Type="Katapoka.DAO.Store.Contato_Tb" Multiplicity="1" />
+          <End Role="Empresa_Tb" Type="Katapoka.DAO.Store.Empresa_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contato_Tb">
+              <PropertyRef Name="IdContato" />
+            </Principal>
+            <Dependent Role="Empresa_Tb">
+              <PropertyRef Name="IdContato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Empresa_Endereco">
+          <End Role="Endereco_Tb" Type="Katapoka.DAO.Store.Endereco_Tb" Multiplicity="1" />
+          <End Role="Empresa_Tb" Type="Katapoka.DAO.Store.Empresa_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Endereco_Tb">
+              <PropertyRef Name="IdEndereco" />
+            </Principal>
+            <Dependent Role="Empresa_Tb">
+              <PropertyRef Name="IdEndereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Empresa_UsuarioAprovacao">
+          <End Role="Usuario_Tb" Type="Katapoka.DAO.Store.Usuario_Tb" Multiplicity="0..1" />
+          <End Role="Empresa_Tb" Type="Katapoka.DAO.Store.Empresa_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Empresa_Tb">
+              <PropertyRef Name="IdUsuarioAprovacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Endereco_Bairro">
+          <End Role="Bairro_Tb" Type="Katapoka.DAO.Store.Bairro_Tb" Multiplicity="0..1" />
+          <End Role="Endereco_Tb" Type="Katapoka.DAO.Store.Endereco_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bairro_Tb">
+              <PropertyRef Name="IdBairro" />
+            </Principal>
+            <Dependent Role="Endereco_Tb">
+              <PropertyRef Name="IdBairro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Endereco_Cidade">
+          <End Role="Cidade_Tb" Type="Katapoka.DAO.Store.Cidade_Tb" Multiplicity="0..1" />
+          <End Role="Endereco_Tb" Type="Katapoka.DAO.Store.Endereco_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cidade_Tb">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="Endereco_Tb">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Projeto_Empresa">
+          <End Role="Empresa_Tb" Type="Katapoka.DAO.Store.Empresa_Tb" Multiplicity="1" />
+          <End Role="Projeto_Tb" Type="Katapoka.DAO.Store.Projeto_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa_Tb">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="Projeto_Tb">
+              <PropertyRef Name="IdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Projeto_Tb_TipoProjeto_Tb">
+          <End Role="TipoProjeto_Tb" Type="Katapoka.DAO.Store.TipoProjeto_Tb" Multiplicity="1" />
+          <End Role="Projeto_Tb" Type="Katapoka.DAO.Store.Projeto_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoProjeto_Tb">
+              <PropertyRef Name="IdTipoProjeto" />
+            </Principal>
+            <Dependent Role="Projeto_Tb">
+              <PropertyRef Name="IdTipoProjeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Projeto_UsuarioCriacao">
+          <End Role="Usuario_Tb" Type="Katapoka.DAO.Store.Usuario_Tb" Multiplicity="1" />
+          <End Role="Projeto_Tb" Type="Katapoka.DAO.Store.Projeto_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Projeto_Tb">
+              <PropertyRef Name="IdUsuarioCriacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ProjetoAtividade_UsuarioCriacao">
+          <End Role="Usuario_Tb" Type="Katapoka.DAO.Store.Usuario_Tb" Multiplicity="1" />
+          <End Role="Atividade_Tb" Type="Katapoka.DAO.Store.Atividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Atividade_Tb">
+              <PropertyRef Name="IdUsuarioCriacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ProjetoAtividade_Usuarios">
+          <End Role="Atividade_Tb" Type="Katapoka.DAO.Store.Atividade_Tb" Multiplicity="1" />
+          <End Role="AtividadeUsuario_Tb" Type="Katapoka.DAO.Store.AtividadeUsuario_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atividade_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Principal>
+            <Dependent Role="AtividadeUsuario_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProjetoAtividadeHistorico">
+          <End Role="Atividade_Tb" Type="Katapoka.DAO.Store.Atividade_Tb" Multiplicity="1" />
+          <End Role="AtividadeLog_Tb" Type="Katapoka.DAO.Store.AtividadeLog_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atividade_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Principal>
+            <Dependent Role="AtividadeLog_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ProjetoAtividadeUsuario_Usuario">
+          <End Role="Usuario_Tb" Type="Katapoka.DAO.Store.Usuario_Tb" Multiplicity="1" />
+          <End Role="AtividadeUsuario_Tb" Type="Katapoka.DAO.Store.AtividadeUsuario_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="AtividadeUsuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ProjetoAtividadeUsuario_UsuarioCriacao">
+          <End Role="Usuario_Tb" Type="Katapoka.DAO.Store.Usuario_Tb" Multiplicity="1" />
+          <End Role="AtividadeUsuario_Tb" Type="Katapoka.DAO.Store.AtividadeUsuario_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="AtividadeUsuario_Tb">
+              <PropertyRef Name="IdUsuarioCriacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProjetoHistorico_Tb_Projeto_Tb">
+          <End Role="Projeto_Tb" Type="Katapoka.DAO.Store.Projeto_Tb" Multiplicity="1" />
+          <End Role="ProjetoInteracao_Tb" Type="Katapoka.DAO.Store.ProjetoInteracao_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projeto_Tb">
+              <PropertyRef Name="IdProjeto" />
+            </Principal>
+            <Dependent Role="ProjetoInteracao_Tb">
+              <PropertyRef Name="IdProjeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProjetoHistorico_Tb_Usuario_Tb">
+          <End Role="Usuario_Tb" Type="Katapoka.DAO.Store.Usuario_Tb" Multiplicity="1" />
+          <End Role="ProjetoInteracao_Tb" Type="Katapoka.DAO.Store.ProjetoInteracao_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="ProjetoInteracao_Tb">
+              <PropertyRef Name="IdUsuarioCriacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Tempo_Atividade">
+          <End Role="Atividade_Tb" Type="Katapoka.DAO.Store.Atividade_Tb" Multiplicity="1" />
+          <End Role="AtividadeApontamentoTempo_Tb" Type="Katapoka.DAO.Store.AtividadeApontamentoTempo_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atividade_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Principal>
+            <Dependent Role="AtividadeApontamentoTempo_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoAtividadeTag_Tb_Tag_Tb">
+          <End Role="Tag_Tb" Type="Katapoka.DAO.Store.Tag_Tb" Multiplicity="1" />
+          <End Role="TipoAtividadeTag_Tb" Type="Katapoka.DAO.Store.TipoAtividadeTag_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tag_Tb">
+              <PropertyRef Name="IdTag" />
+            </Principal>
+            <Dependent Role="TipoAtividadeTag_Tb">
+              <PropertyRef Name="IdTag" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoAtividadeTag_Tb_TipoAtividade_Tb">
+          <End Role="TipoAtividade_Tb" Type="Katapoka.DAO.Store.TipoAtividade_Tb" Multiplicity="1" />
+          <End Role="TipoAtividadeTag_Tb" Type="Katapoka.DAO.Store.TipoAtividadeTag_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Principal>
+            <Dependent Role="TipoAtividadeTag_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoProjetoTipoAtividade_Tb_TipoAtividade_Tb">
+          <End Role="TipoAtividade_Tb" Type="Katapoka.DAO.Store.TipoAtividade_Tb" Multiplicity="1" />
+          <End Role="TipoProjetoTipoAtividade_Tb" Type="Katapoka.DAO.Store.TipoProjetoTipoAtividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Principal>
+            <Dependent Role="TipoProjetoTipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoProjetoTipoAtividade_Tb_TipoProjeto_Tb">
+          <End Role="TipoProjeto_Tb" Type="Katapoka.DAO.Store.TipoProjeto_Tb" Multiplicity="1" />
+          <End Role="TipoProjetoTipoAtividade_Tb" Type="Katapoka.DAO.Store.TipoProjetoTipoAtividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoProjeto_Tb">
+              <PropertyRef Name="IdTipoProjeto" />
+            </Principal>
+            <Dependent Role="TipoProjetoTipoAtividade_Tb">
+              <PropertyRef Name="IdTipoProjeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb">
+          <End Role="TipoAtividade_Tb" Type="Katapoka.DAO.Store.TipoAtividade_Tb" Multiplicity="1" />
+          <End Role="TipoProjetoTipoAtividadePredecessora_Tb" Type="Katapoka.DAO.Store.TipoProjetoTipoAtividadePredecessora_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Principal>
+            <Dependent Role="TipoProjetoTipoAtividadePredecessora_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb1">
+          <End Role="TipoAtividade_Tb" Type="Katapoka.DAO.Store.TipoAtividade_Tb" Multiplicity="0..1" />
+          <End Role="TipoProjetoTipoAtividadePredecessora_Tb" Type="Katapoka.DAO.Store.TipoProjetoTipoAtividadePredecessora_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Principal>
+            <Dependent Role="TipoProjetoTipoAtividadePredecessora_Tb">
+              <PropertyRef Name="IdTipoAtividadePredecessora" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoProjeto_Tb">
+          <End Role="TipoProjeto_Tb" Type="Katapoka.DAO.Store.TipoProjeto_Tb" Multiplicity="1" />
+          <End Role="TipoProjetoTipoAtividadePredecessora_Tb" Type="Katapoka.DAO.Store.TipoProjetoTipoAtividadePredecessora_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoProjeto_Tb">
+              <PropertyRef Name="IdTipoProjeto" />
+            </Principal>
+            <Dependent Role="TipoProjetoTipoAtividadePredecessora_Tb">
+              <PropertyRef Name="IdTipoProjeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Tb_Cargo_Tb">
+          <End Role="Cargo_Tb" Type="Katapoka.DAO.Store.Cargo_Tb" Multiplicity="1" />
+          <End Role="Usuario_Tb" Type="Katapoka.DAO.Store.Usuario_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo_Tb">
+              <PropertyRef Name="IdCargo" />
+            </Principal>
+            <Dependent Role="Usuario_Tb">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Usuario_UsuarioNivel">
+          <End Role="UsuarioNivel_Tb" Type="Katapoka.DAO.Store.UsuarioNivel_Tb" Multiplicity="1" />
+          <End Role="Usuario_Tb" Type="Katapoka.DAO.Store.Usuario_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsuarioNivel_Tb">
+              <PropertyRef Name="IdUsuarioNivel" />
+            </Principal>
+            <Dependent Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuarioNivel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Katapoka.DAO" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="QuanticaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AreaAtuacao_Tb" EntityType="Katapoka.DAO.AreaAtuacao_Tb" />
+          <EntitySet Name="Atividade_Tb" EntityType="Katapoka.DAO.Atividade_Tb" />
+          <EntitySet Name="AtividadeApontamentoTempo_Tb" EntityType="Katapoka.DAO.AtividadeApontamentoTempo_Tb" />
+          <EntitySet Name="AtividadeLog_Tb" EntityType="Katapoka.DAO.AtividadeLog_Tb" />
+          <EntitySet Name="AtividadeUsuario_Tb" EntityType="Katapoka.DAO.AtividadeUsuario_Tb" />
+          <EntitySet Name="Bairro_Tb" EntityType="Katapoka.DAO.Bairro_Tb" />
+          <EntitySet Name="Cargo_Tb" EntityType="Katapoka.DAO.Cargo_Tb" />
+          <EntitySet Name="CargoTipoAtividade_Tb" EntityType="Katapoka.DAO.CargoTipoAtividade_Tb" />
+          <EntitySet Name="Cidade_Tb" EntityType="Katapoka.DAO.Cidade_Tb" />
+          <EntitySet Name="Contato_Tb" EntityType="Katapoka.DAO.Contato_Tb" />
+          <EntitySet Name="Empresa_Tb" EntityType="Katapoka.DAO.Empresa_Tb" />
+          <EntitySet Name="Endereco_Tb" EntityType="Katapoka.DAO.Endereco_Tb" />
+          <EntitySet Name="Projeto_Tb" EntityType="Katapoka.DAO.Projeto_Tb" />
+          <EntitySet Name="ProjetoInteracao_Tb" EntityType="Katapoka.DAO.ProjetoInteracao_Tb" />
+          <EntitySet Name="sysdiagrams" EntityType="Katapoka.DAO.sysdiagram" />
+          <EntitySet Name="TipoProjeto_Tb" EntityType="Katapoka.DAO.TipoProjeto_Tb" />
+          <EntitySet Name="TipoProjetoTipoAtividade_Tb" EntityType="Katapoka.DAO.TipoProjetoTipoAtividade_Tb" />
+          <EntitySet Name="UF_Tb" EntityType="Katapoka.DAO.UF_Tb" />
+          <EntitySet Name="Usuario_Tb" EntityType="Katapoka.DAO.Usuario_Tb" />
+          <EntitySet Name="UsuarioNivel_Tb" EntityType="Katapoka.DAO.UsuarioNivel_Tb" />
+          <AssociationSet Name="Fk_Empresa_AreaAtuacao" Association="Katapoka.DAO.Fk_Empresa_AreaAtuacao">
+            <End Role="AreaAtuacao_Tb" EntitySet="AreaAtuacao_Tb" />
+            <End Role="Empresa_Tb" EntitySet="Empresa_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Atividade_Tb_Projeto_Tb" Association="Katapoka.DAO.FK_Atividade_Tb_Projeto_Tb">
+            <End Role="Projeto_Tb" EntitySet="Projeto_Tb" />
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ProjetoAtividade_UsuarioCriacao" Association="Katapoka.DAO.Fk_ProjetoAtividade_UsuarioCriacao">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ProjetoAtividade_Usuarios" Association="Katapoka.DAO.Fk_ProjetoAtividade_Usuarios">
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+            <End Role="AtividadeUsuario_Tb" EntitySet="AtividadeUsuario_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProjetoAtividadeHistorico" Association="Katapoka.DAO.FK_ProjetoAtividadeHistorico">
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+            <End Role="AtividadeLog_Tb" EntitySet="AtividadeLog_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Tempo_Atividade" Association="Katapoka.DAO.Fk_Tempo_Atividade">
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+            <End Role="AtividadeApontamentoTempo_Tb" EntitySet="AtividadeApontamentoTempo_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AtividadeApontamentoTempo_Tb_Usuario_Tb" Association="Katapoka.DAO.FK_AtividadeApontamentoTempo_Tb_Usuario_Tb">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="AtividadeApontamentoTempo_Tb" EntitySet="AtividadeApontamentoTempo_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ProjetoAtividadeUsuario_Usuario" Association="Katapoka.DAO.Fk_ProjetoAtividadeUsuario_Usuario">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="AtividadeUsuario_Tb" EntitySet="AtividadeUsuario_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ProjetoAtividadeUsuario_UsuarioCriacao" Association="Katapoka.DAO.Fk_ProjetoAtividadeUsuario_UsuarioCriacao">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="AtividadeUsuario_Tb" EntitySet="AtividadeUsuario_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Bairro_Cidade" Association="Katapoka.DAO.Fk_Bairro_Cidade">
+            <End Role="Cidade_Tb" EntitySet="Cidade_Tb" />
+            <End Role="Bairro_Tb" EntitySet="Bairro_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Endereco_Bairro" Association="Katapoka.DAO.Fk_Endereco_Bairro">
+            <End Role="Bairro_Tb" EntitySet="Bairro_Tb" />
+            <End Role="Endereco_Tb" EntitySet="Endereco_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CargoTipoAtividade_Tb_Cargo_Tb" Association="Katapoka.DAO.FK_CargoTipoAtividade_Tb_Cargo_Tb">
+            <End Role="Cargo_Tb" EntitySet="Cargo_Tb" />
+            <End Role="CargoTipoAtividade_Tb" EntitySet="CargoTipoAtividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Tb_Cargo_Tb" Association="Katapoka.DAO.FK_Usuario_Tb_Cargo_Tb">
+            <End Role="Cargo_Tb" EntitySet="Cargo_Tb" />
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Cidade_UF" Association="Katapoka.DAO.Fk_Cidade_UF">
+            <End Role="UF_Tb" EntitySet="UF_Tb" />
+            <End Role="Cidade_Tb" EntitySet="Cidade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Endereco_Cidade" Association="Katapoka.DAO.Fk_Endereco_Cidade">
+            <End Role="Cidade_Tb" EntitySet="Cidade_Tb" />
+            <End Role="Endereco_Tb" EntitySet="Endereco_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Empresa_Contato" Association="Katapoka.DAO.Fk_Empresa_Contato">
+            <End Role="Contato_Tb" EntitySet="Contato_Tb" />
+            <End Role="Empresa_Tb" EntitySet="Empresa_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Empresa_Endereco" Association="Katapoka.DAO.Fk_Empresa_Endereco">
+            <End Role="Endereco_Tb" EntitySet="Endereco_Tb" />
+            <End Role="Empresa_Tb" EntitySet="Empresa_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Empresa_UsuarioAprovacao" Association="Katapoka.DAO.Fk_Empresa_UsuarioAprovacao">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="Empresa_Tb" EntitySet="Empresa_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Projeto_Empresa" Association="Katapoka.DAO.Fk_Projeto_Empresa">
+            <End Role="Empresa_Tb" EntitySet="Empresa_Tb" />
+            <End Role="Projeto_Tb" EntitySet="Projeto_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Projeto_Tb_TipoProjeto_Tb" Association="Katapoka.DAO.FK_Projeto_Tb_TipoProjeto_Tb">
+            <End Role="TipoProjeto_Tb" EntitySet="TipoProjeto_Tb" />
+            <End Role="Projeto_Tb" EntitySet="Projeto_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Projeto_UsuarioCriacao" Association="Katapoka.DAO.Fk_Projeto_UsuarioCriacao">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="Projeto_Tb" EntitySet="Projeto_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProjetoHistorico_Tb_Projeto_Tb" Association="Katapoka.DAO.FK_ProjetoHistorico_Tb_Projeto_Tb">
+            <End Role="Projeto_Tb" EntitySet="Projeto_Tb" />
+            <End Role="ProjetoInteracao_Tb" EntitySet="ProjetoInteracao_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProjetoHistorico_Tb_Usuario_Tb" Association="Katapoka.DAO.FK_ProjetoHistorico_Tb_Usuario_Tb">
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+            <End Role="ProjetoInteracao_Tb" EntitySet="ProjetoInteracao_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoProjetoTipoAtividade_Tb_TipoProjeto_Tb" Association="Katapoka.DAO.FK_TipoProjetoTipoAtividade_Tb_TipoProjeto_Tb">
+            <End Role="TipoProjeto_Tb" EntitySet="TipoProjeto_Tb" />
+            <End Role="TipoProjetoTipoAtividade_Tb" EntitySet="TipoProjetoTipoAtividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Usuario_UsuarioNivel" Association="Katapoka.DAO.Fk_Usuario_UsuarioNivel">
+            <End Role="UsuarioNivel_Tb" EntitySet="UsuarioNivel_Tb" />
+            <End Role="Usuario_Tb" EntitySet="Usuario_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Atividade_Tb_Atividade_Tb" Association="Katapoka.DAO.FK_Atividade_Tb_Atividade_Tb">
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+            <End Role="Atividade_Tb1" EntitySet="Atividade_Tb" />
+          </AssociationSet>
+          <EntitySet Name="AtividadeTag_Tb" EntityType="Katapoka.DAO.AtividadeTag_Tb" />
+          <EntitySet Name="Tag_Tb" EntityType="Katapoka.DAO.Tag_Tb" />
+          <AssociationSet Name="FK_AtividadeTag_Tb_Atividade_Tb" Association="Katapoka.DAO.FK_AtividadeTag_Tb_Atividade_Tb">
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+            <End Role="AtividadeTag_Tb" EntitySet="AtividadeTag_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AtividadeTag_Tb_Tag_Tb" Association="Katapoka.DAO.FK_AtividadeTag_Tb_Tag_Tb">
+            <End Role="Tag_Tb" EntitySet="Tag_Tb" />
+            <End Role="AtividadeTag_Tb" EntitySet="AtividadeTag_Tb" />
+          </AssociationSet>
+          <EntitySet Name="TipoAtividade_Tb" EntityType="Katapoka.DAO.TipoAtividade_Tb" />
+          <EntitySet Name="TipoProjetoTipoAtividadePredecessora_Tb" EntityType="Katapoka.DAO.TipoProjetoTipoAtividadePredecessora_Tb" />
+          <AssociationSet Name="FK_Atividade_Tb_TipoAtividade_Tb" Association="Katapoka.DAO.FK_Atividade_Tb_TipoAtividade_Tb">
+            <End Role="TipoAtividade_Tb" EntitySet="TipoAtividade_Tb" />
+            <End Role="Atividade_Tb" EntitySet="Atividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CargoTipoAtividade_Tb_TipoAtividade_Tb" Association="Katapoka.DAO.FK_CargoTipoAtividade_Tb_TipoAtividade_Tb">
+            <End Role="TipoAtividade_Tb" EntitySet="TipoAtividade_Tb" />
+            <End Role="CargoTipoAtividade_Tb" EntitySet="CargoTipoAtividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoProjetoTipoAtividade_Tb_TipoAtividade_Tb" Association="Katapoka.DAO.FK_TipoProjetoTipoAtividade_Tb_TipoAtividade_Tb">
+            <End Role="TipoAtividade_Tb" EntitySet="TipoAtividade_Tb" />
+            <End Role="TipoProjetoTipoAtividade_Tb" EntitySet="TipoProjetoTipoAtividade_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb" Association="Katapoka.DAO.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb">
+            <End Role="TipoAtividade_Tb" EntitySet="TipoAtividade_Tb" />
+            <End Role="TipoProjetoTipoAtividadePredecessora_Tb" EntitySet="TipoProjetoTipoAtividadePredecessora_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb1" Association="Katapoka.DAO.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb1">
+            <End Role="TipoAtividade_Tb" EntitySet="TipoAtividade_Tb" />
+            <End Role="TipoProjetoTipoAtividadePredecessora_Tb" EntitySet="TipoProjetoTipoAtividadePredecessora_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoProjeto_Tb" Association="Katapoka.DAO.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoProjeto_Tb">
+            <End Role="TipoProjeto_Tb" EntitySet="TipoProjeto_Tb" />
+            <End Role="TipoProjetoTipoAtividadePredecessora_Tb" EntitySet="TipoProjetoTipoAtividadePredecessora_Tb" />
+          </AssociationSet>
+          <EntitySet Name="TipoAtividadeTag_Tb" EntityType="Katapoka.DAO.TipoAtividadeTag_Tb" />
+          <AssociationSet Name="FK_TipoAtividadeTag_Tb_Tag_Tb" Association="Katapoka.DAO.FK_TipoAtividadeTag_Tb_Tag_Tb">
+            <End Role="Tag_Tb" EntitySet="Tag_Tb" />
+            <End Role="TipoAtividadeTag_Tb" EntitySet="TipoAtividadeTag_Tb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoAtividadeTag_Tb_TipoAtividade_Tb" Association="Katapoka.DAO.FK_TipoAtividadeTag_Tb_TipoAtividade_Tb">
+            <End Role="TipoAtividade_Tb" EntitySet="TipoAtividade_Tb" />
+            <End Role="TipoAtividadeTag_Tb" EntitySet="TipoAtividadeTag_Tb" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="AreaAtuacao_Tb">
+          <Key>
+            <PropertyRef Name="IdAreaAtuacao" />
+          </Key>
+          <Property Type="Int32" Name="IdAreaAtuacao" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DsAreaAtuacao" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Empresa_Tb" Relationship="Katapoka.DAO.Fk_Empresa_AreaAtuacao" FromRole="AreaAtuacao_Tb" ToRole="Empresa_Tb" />
+        </EntityType>
+        <EntityType Name="Atividade_Tb">
+          <Key>
+            <PropertyRef Name="IdAtividade" />
+          </Key>
+          <Property Type="Int32" Name="IdAtividade" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdProjeto" Nullable="false" />
+          <Property Type="String" Name="DsTituloAtividade" MaxLength="200" FixedLength="false" Unicode="false" Nullable="true" />
+          <Property Name="QtTempoEstimado" Type="Decimal" Precision="10" Scale="3" Nullable="true" />
+          <Property Name="QtTempoExecutado" Nullable="false" Type="Decimal" Precision="10" Scale="3" />
+          <Property Type="Decimal" Name="VrCompletoPorcentagem" Precision="3" Scale="0" Nullable="true" />
+          <Property Type="DateTime" Name="DtInicio" Precision="3" Nullable="true" />
+          <Property Type="DateTime" Name="DtTermino" Precision="3" Nullable="true" />
+          <Property Type="String" Name="DsAtividade" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="true" />
+          <Property Type="Int32" Name="IdUsuarioCriacao" Nullable="false" />
+          <Property Type="DateTime" Name="DtCriacao" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="IdTipoAtividade" />
+          <NavigationProperty Name="Projeto_Tb" Relationship="Katapoka.DAO.FK_Atividade_Tb_Projeto_Tb" FromRole="Atividade_Tb" ToRole="Projeto_Tb" />
+          <NavigationProperty Name="Usuario_Tb" Relationship="Katapoka.DAO.Fk_ProjetoAtividade_UsuarioCriacao" FromRole="Atividade_Tb" ToRole="Usuario_Tb" />
+          <NavigationProperty Name="AtividadeUsuario_Tb" Relationship="Katapoka.DAO.Fk_ProjetoAtividade_Usuarios" FromRole="Atividade_Tb" ToRole="AtividadeUsuario_Tb" />
+          <NavigationProperty Name="AtividadeLog_Tb" Relationship="Katapoka.DAO.FK_ProjetoAtividadeHistorico" FromRole="Atividade_Tb" ToRole="AtividadeLog_Tb" />
+          <NavigationProperty Name="AtividadeApontamentoTempo_Tb" Relationship="Katapoka.DAO.Fk_Tempo_Atividade" FromRole="Atividade_Tb" ToRole="AtividadeApontamentoTempo_Tb" />
+          <Property Type="Int32" Name="IdAtividadePredecessora" Nullable="true" />
+          <NavigationProperty Name="AtividadesSucessoras_Tb" Relationship="Katapoka.DAO.FK_Atividade_Tb_Atividade_Tb" FromRole="Atividade_Tb" ToRole="Atividade_Tb1" />
+          <NavigationProperty Name="AtividadePredecessora_Tb" Relationship="Katapoka.DAO.FK_Atividade_Tb_Atividade_Tb" FromRole="Atividade_Tb1" ToRole="Atividade_Tb" />
+          <NavigationProperty Name="AtividadeTag_Tb" Relationship="Katapoka.DAO.FK_AtividadeTag_Tb_Atividade_Tb" FromRole="Atividade_Tb" ToRole="AtividadeTag_Tb" />
+          <Property Type="String" Name="FlStatus" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="TipoAtividade_Tb" Relationship="Katapoka.DAO.FK_Atividade_Tb_TipoAtividade_Tb" FromRole="Atividade_Tb" ToRole="TipoAtividade_Tb" />
+        </EntityType>
+        <EntityType Name="AtividadeApontamentoTempo_Tb">
+          <Key>
+            <PropertyRef Name="IdAtividadeApontamentoTempo" />
+          </Key>
+          <Property Type="Int32" Name="IdAtividadeApontamentoTempo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+          <Property Type="Int32" Name="IdAtividade" Nullable="false" />
+          <Property Type="DateTime" Name="DtInicio" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="DtTermino" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Atividade_Tb" Relationship="Katapoka.DAO.Fk_Tempo_Atividade" FromRole="AtividadeApontamentoTempo_Tb" ToRole="Atividade_Tb" />
+          <NavigationProperty Name="Usuario_Tb" Relationship="Katapoka.DAO.FK_AtividadeApontamentoTempo_Tb_Usuario_Tb" FromRole="AtividadeApontamentoTempo_Tb" ToRole="Usuario_Tb" />
+        </EntityType>
+        <EntityType Name="AtividadeLog_Tb">
+          <Key>
+            <PropertyRef Name="IdAtividadeLog" />
+          </Key>
+          <Property Type="Int32" Name="IdAtividadeLog" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdAtividade" Nullable="false" />
+          <Property Type="DateTime" Name="DtInicioAntigo" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="DtTerminoAntigo" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="DtInicioNovo" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="DtTerminoNovo" Nullable="false" Precision="3" />
+          <Property Type="String" Name="DsMotivo" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdUsuarioAlteracao" Nullable="false" />
+          <Property Type="DateTime" Name="DtAlteracao" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Atividade_Tb" Relationship="Katapoka.DAO.FK_ProjetoAtividadeHistorico" FromRole="AtividadeLog_Tb" ToRole="Atividade_Tb" />
+        </EntityType>
+        <EntityType Name="AtividadeUsuario_Tb">
+          <Key>
+            <PropertyRef Name="IdAtividadeUsuario" />
+          </Key>
+          <Property Type="Int32" Name="IdAtividadeUsuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdAtividade" Nullable="false" />
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+          <Property Type="Int32" Name="IdUsuarioCriacao" Nullable="false" />
+          <Property Type="DateTime" Name="DtCriacao" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Atividade_Tb" Relationship="Katapoka.DAO.Fk_ProjetoAtividade_Usuarios" FromRole="AtividadeUsuario_Tb" ToRole="Atividade_Tb" />
+          <NavigationProperty Name="Usuario_Tb" Relationship="Katapoka.DAO.Fk_ProjetoAtividadeUsuario_Usuario" FromRole="AtividadeUsuario_Tb" ToRole="Usuario_Tb" />
+          <NavigationProperty Name="UsuarioCriacao_Tb" Relationship="Katapoka.DAO.Fk_ProjetoAtividadeUsuario_UsuarioCriacao" FromRole="AtividadeUsuario_Tb" ToRole="Usuario_Tb" />
+        </EntityType>
+        <EntityType Name="Bairro_Tb">
+          <Key>
+            <PropertyRef Name="IdBairro" />
+          </Key>
+          <Property Type="Int32" Name="IdBairro" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdCidade" Nullable="false" />
+          <Property Type="String" Name="DsNome" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Cidade_Tb" Relationship="Katapoka.DAO.Fk_Bairro_Cidade" FromRole="Bairro_Tb" ToRole="Cidade_Tb" />
+          <NavigationProperty Name="Endereco_Tb" Relationship="Katapoka.DAO.Fk_Endereco_Bairro" FromRole="Bairro_Tb" ToRole="Endereco_Tb" />
+        </EntityType>
+        <EntityType Name="Cargo_Tb">
+          <Key>
+            <PropertyRef Name="IdCargo" />
+          </Key>
+          <Property Type="Int32" Name="IdCargo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DsCargo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CargoTipoAtividade_Tb" Relationship="Katapoka.DAO.FK_CargoTipoAtividade_Tb_Cargo_Tb" FromRole="Cargo_Tb" ToRole="CargoTipoAtividade_Tb" />
+          <NavigationProperty Name="Usuario_Tb" Relationship="Katapoka.DAO.FK_Usuario_Tb_Cargo_Tb" FromRole="Cargo_Tb" ToRole="Usuario_Tb" />
+        </EntityType>
+        <EntityType Name="CargoTipoAtividade_Tb">
+          <Key>
+            <PropertyRef Name="IdCargoTipoAtividade" />
+          </Key>
+          <Property Type="Int32" Name="IdCargoTipoAtividade" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdCargo" Nullable="false" />
+          <Property Type="Int32" Name="IdTipoAtividade" Nullable="false" />
+          <NavigationProperty Name="Cargo_Tb" Relationship="Katapoka.DAO.FK_CargoTipoAtividade_Tb_Cargo_Tb" FromRole="CargoTipoAtividade_Tb" ToRole="Cargo_Tb" />
+          <NavigationProperty Name="TipoAtividade_Tb" Relationship="Katapoka.DAO.FK_CargoTipoAtividade_Tb_TipoAtividade_Tb" FromRole="CargoTipoAtividade_Tb" ToRole="TipoAtividade_Tb" />
+        </EntityType>
+        <EntityType Name="Cidade_Tb">
+          <Key>
+            <PropertyRef Name="IdCidade" />
+          </Key>
+          <Property Type="Int32" Name="IdCidade" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CdUF" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DsNome" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Bairro_Tb" Relationship="Katapoka.DAO.Fk_Bairro_Cidade" FromRole="Cidade_Tb" ToRole="Bairro_Tb" />
+          <NavigationProperty Name="UF_Tb" Relationship="Katapoka.DAO.Fk_Cidade_UF" FromRole="Cidade_Tb" ToRole="UF_Tb" />
+          <NavigationProperty Name="Endereco_Tb" Relationship="Katapoka.DAO.Fk_Endereco_Cidade" FromRole="Cidade_Tb" ToRole="Endereco_Tb" />
+        </EntityType>
+        <EntityType Name="Contato_Tb">
+          <Key>
+            <PropertyRef Name="IdContato" />
+          </Key>
+          <Property Type="Int32" Name="IdContato" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DsTelefoneResidencial" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DsTelefoneCelular" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DsTelefoneComercial" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DsFax" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DsObservacaoContato" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Empresa_Tb" Relationship="Katapoka.DAO.Fk_Empresa_Contato" FromRole="Contato_Tb" ToRole="Empresa_Tb" />
+        </EntityType>
+        <EntityType Name="Empresa_Tb">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+          </Key>
+          <Property Type="Int32" Name="IdEmpresa" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEndereco" Nullable="false" />
+          <Property Type="Int32" Name="IdContato" Nullable="false" />
+          <Property Type="Int32" Name="IdAreaAtuacao" Nullable="false" />
+          <Property Type="String" Name="DsNomeFantasia" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DsRazaoSocial" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NrCnpj" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DsEmail" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DsSumarioEmpresa" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="FlAceiteTermo" Nullable="false" />
+          <Property Type="String" Name="DsSite" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DtCadastro" Nullable="false" Precision="3" />
+          <Property Type="Boolean" Name="FlAprovada" Nullable="false" />
+          <Property Type="DateTime" Name="DtAprovacao" Precision="3" />
+          <Property Type="Int32" Name="IdUsuarioAprovacao" />
+          <Property Type="String" Name="DsMotivoRejeicao" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Logo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AreaAtuacao_Tb" Relationship="Katapoka.DAO.Fk_Empresa_AreaAtuacao" FromRole="Empresa_Tb" ToRole="AreaAtuacao_Tb" />
+          <NavigationProperty Name="Contato_Tb" Relationship="Katapoka.DAO.Fk_Empresa_Contato" FromRole="Empresa_Tb" ToRole="Contato_Tb" />
+          <NavigationProperty Name="Endereco_Tb" Relationship="Katapoka.DAO.Fk_Empresa_Endereco" FromRole="Empresa_Tb" ToRole="Endereco_Tb" />
+          <NavigationProperty Name="Usuario_Tb" Relationship="Katapoka.DAO.Fk_Empresa_UsuarioAprovacao" FromRole="Empresa_Tb" ToRole="Usuario_Tb" />
+          <NavigationProperty Name="Projeto_Tb" Relationship="Katapoka.DAO.Fk_Projeto_Empresa" FromRole="Empresa_Tb" ToRole="Projeto_Tb" />
+        </EntityType>
+        <EntityType Name="Endereco_Tb">
+          <Key>
+            <PropertyRef Name="IdEndereco" />
+          </Key>
+          <Property Type="Int32" Name="IdEndereco" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="NrCep" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DsEndereco" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NrEndereco" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DsComplemento" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdBairro" />
+          <Property Type="Int32" Name="IdCidade" />
+          <Property Type="String" Name="DsBairroOutro" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Bairro_Tb" Relationship="Katapoka.DAO.Fk_Endereco_Bairro" FromRole="Endereco_Tb" ToRole="Bairro_Tb" />
+          <NavigationProperty Name="Cidade_Tb" Relationship="Katapoka.DAO.Fk_Endereco_Cidade" FromRole="Endereco_Tb" ToRole="Cidade_Tb" />
+          <NavigationProperty Name="Empresa_Tb" Relationship="Katapoka.DAO.Fk_Empresa_Endereco" FromRole="Endereco_Tb" ToRole="Empresa_Tb" />
+        </EntityType>
+        <EntityType Name="Projeto_Tb">
+          <Key>
+            <PropertyRef Name="IdProjeto" />
+          </Key>
+          <Property Type="Int32" Name="IdProjeto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+          <Property Type="String" Name="DsNome" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DtInicioEstimado" Precision="3" />
+          <Property Type="DateTime" Name="DtTerminoEstimado" Precision="3" />
+          <Property Type="String" Name="DsCodigoReferencia" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FlStatus" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="IdUsuarioCriacao" Nullable="false" />
+          <Property Type="DateTime" Name="DtCriacao" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="IdTipoProjeto" Nullable="false" />
+          <NavigationProperty Name="Atividade_Tb" Relationship="Katapoka.DAO.FK_Atividade_Tb_Projeto_Tb" FromRole="Projeto_Tb" ToRole="Atividade_Tb" />
+          <NavigationProperty Name="Empresa_Tb" Relationship="Katapoka.DAO.Fk_Projeto_Empresa" FromRole="Projeto_Tb" ToRole="Empresa_Tb" />
+          <NavigationProperty Name="TipoProjeto_Tb" Relationship="Katapoka.DAO.FK_Projeto_Tb_TipoProjeto_Tb" FromRole="Projeto_Tb" ToRole="TipoProjeto_Tb" />
+          <NavigationProperty Name="Usuario_Tb" Relationship="Katapoka.DAO.Fk_Projeto_UsuarioCriacao" FromRole="Projeto_Tb" ToRole="Usuario_Tb" />
+          <NavigationProperty Name="ProjetoInteracao_Tb" Relationship="Katapoka.DAO.FK_ProjetoHistorico_Tb_Projeto_Tb" FromRole="Projeto_Tb" ToRole="ProjetoInteracao_Tb" />
+        </EntityType>
+        <EntityType Name="ProjetoInteracao_Tb">
+          <Key>
+            <PropertyRef Name="IdProjetoInteracao" />
+          </Key>
+          <Property Type="Int32" Name="IdProjetoInteracao" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdProjeto" Nullable="false" />
+          <Property Type="String" Name="DsHistorico" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DtCriacao" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="IdUsuarioCriacao" Nullable="false" />
+          <NavigationProperty Name="Projeto_Tb" Relationship="Katapoka.DAO.FK_ProjetoHistorico_Tb_Projeto_Tb" FromRole="ProjetoInteracao_Tb" ToRole="Projeto_Tb" />
+          <NavigationProperty Name="Usuario_Tb" Relationship="Katapoka.DAO.FK_ProjetoHistorico_Tb_Usuario_Tb" FromRole="ProjetoInteracao_Tb" ToRole="Usuario_Tb" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TipoProjeto_Tb">
+          <Key>
+            <PropertyRef Name="IdTipoProjeto" />
+          </Key>
+          <Property Type="Int32" Name="IdTipoProjeto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DsTipo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Projeto_Tb" Relationship="Katapoka.DAO.FK_Projeto_Tb_TipoProjeto_Tb" FromRole="TipoProjeto_Tb" ToRole="Projeto_Tb" />
+          <NavigationProperty Name="TipoProjetoTipoAtividade_Tb" Relationship="Katapoka.DAO.FK_TipoProjetoTipoAtividade_Tb_TipoProjeto_Tb" FromRole="TipoProjeto_Tb" ToRole="TipoProjetoTipoAtividade_Tb" />
+          <NavigationProperty Name="TipoProjetoTipoAtividadePredecessora_Tb" Relationship="Katapoka.DAO.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoProjeto_Tb" FromRole="TipoProjeto_Tb" ToRole="TipoProjetoTipoAtividadePredecessora_Tb" />
+        </EntityType>
+        <EntityType Name="TipoProjetoTipoAtividade_Tb">
+          <Key>
+            <PropertyRef Name="IdTipoProjetoTipoAtividade" />
+          </Key>
+          <Property Type="Int32" Name="IdTipoProjetoTipoAtividade" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdTipoProjeto" Nullable="false" />
+          <Property Type="Int32" Name="IdTipoAtividade" Nullable="false" />
+          <NavigationProperty Name="TipoProjeto_Tb" Relationship="Katapoka.DAO.FK_TipoProjetoTipoAtividade_Tb_TipoProjeto_Tb" FromRole="TipoProjetoTipoAtividade_Tb" ToRole="TipoProjeto_Tb" />
+          <NavigationProperty Name="TipoAtividade_Tb" Relationship="Katapoka.DAO.FK_TipoProjetoTipoAtividade_Tb_TipoAtividade_Tb" FromRole="TipoProjetoTipoAtividade_Tb" ToRole="TipoAtividade_Tb" />
+        </EntityType>
+        <EntityType Name="UF_Tb">
+          <Key>
+            <PropertyRef Name="CdUF" />
+          </Key>
+          <Property Type="String" Name="CdUF" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DsUF" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Cidade_Tb" Relationship="Katapoka.DAO.Fk_Cidade_UF" FromRole="UF_Tb" ToRole="Cidade_Tb" />
+        </EntityType>
+        <EntityType Name="Usuario_Tb">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+          <Property Type="Int32" Name="IdUsuarioNivel" Nullable="false" />
+          <Property Type="String" Name="DsNome" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DsEmail" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DtValidadeLogin" Precision="3" />
+          <Property Type="String" Name="DsHashLogin" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DsSenha" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IdCargo" Nullable="false" />
+          <NavigationProperty Name="Atividade_Tb" Relationship="Katapoka.DAO.Fk_ProjetoAtividade_UsuarioCriacao" FromRole="Usuario_Tb" ToRole="Atividade_Tb" />
+          <NavigationProperty Name="AtividadeApontamentoTempo_Tb" Relationship="Katapoka.DAO.FK_AtividadeApontamentoTempo_Tb_Usuario_Tb" FromRole="Usuario_Tb" ToRole="AtividadeApontamentoTempo_Tb" />
+          <NavigationProperty Name="AtividadeUsuario_Tb" Relationship="Katapoka.DAO.Fk_ProjetoAtividadeUsuario_Usuario" FromRole="Usuario_Tb" ToRole="AtividadeUsuario_Tb" />
+          <NavigationProperty Name="AtividadeUsuarioCriadas_Tb" Relationship="Katapoka.DAO.Fk_ProjetoAtividadeUsuario_UsuarioCriacao" FromRole="Usuario_Tb" ToRole="AtividadeUsuario_Tb" />
+          <NavigationProperty Name="Cargo_Tb" Relationship="Katapoka.DAO.FK_Usuario_Tb_Cargo_Tb" FromRole="Usuario_Tb" ToRole="Cargo_Tb" />
+          <NavigationProperty Name="Empresa_Tb" Relationship="Katapoka.DAO.Fk_Empresa_UsuarioAprovacao" FromRole="Usuario_Tb" ToRole="Empresa_Tb" />
+          <NavigationProperty Name="Projeto_Tb" Relationship="Katapoka.DAO.Fk_Projeto_UsuarioCriacao" FromRole="Usuario_Tb" ToRole="Projeto_Tb" />
+          <NavigationProperty Name="ProjetoInteracao_Tb" Relationship="Katapoka.DAO.FK_ProjetoHistorico_Tb_Usuario_Tb" FromRole="Usuario_Tb" ToRole="ProjetoInteracao_Tb" />
+          <NavigationProperty Name="UsuarioNivel_Tb" Relationship="Katapoka.DAO.Fk_Usuario_UsuarioNivel" FromRole="Usuario_Tb" ToRole="UsuarioNivel_Tb" />
+        </EntityType>
+        <EntityType Name="UsuarioNivel_Tb">
+          <Key>
+            <PropertyRef Name="IdUsuarioNivel" />
+          </Key>
+          <Property Type="Int32" Name="IdUsuarioNivel" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DsNivel" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Usuario_Tb" Relationship="Katapoka.DAO.Fk_Usuario_UsuarioNivel" FromRole="UsuarioNivel_Tb" ToRole="Usuario_Tb" />
+        </EntityType>
+        <Association Name="Fk_Empresa_AreaAtuacao">
+          <End Type="Katapoka.DAO.AreaAtuacao_Tb" Role="AreaAtuacao_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.Empresa_Tb" Role="Empresa_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AreaAtuacao_Tb">
+              <PropertyRef Name="IdAreaAtuacao" />
+            </Principal>
+            <Dependent Role="Empresa_Tb">
+              <PropertyRef Name="IdAreaAtuacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Atividade_Tb_Projeto_Tb">
+          <End Type="Katapoka.DAO.Projeto_Tb" Role="Projeto_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.Atividade_Tb" Role="Atividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projeto_Tb">
+              <PropertyRef Name="IdProjeto" />
+            </Principal>
+            <Dependent Role="Atividade_Tb">
+              <PropertyRef Name="IdProjeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ProjetoAtividade_UsuarioCriacao">
+          <End Type="Katapoka.DAO.Usuario_Tb" Role="Usuario_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.Atividade_Tb" Role="Atividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Atividade_Tb">
+              <PropertyRef Name="IdUsuarioCriacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ProjetoAtividade_Usuarios">
+          <End Type="Katapoka.DAO.Atividade_Tb" Role="Atividade_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.AtividadeUsuario_Tb" Role="AtividadeUsuario_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atividade_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Principal>
+            <Dependent Role="AtividadeUsuario_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProjetoAtividadeHistorico">
+          <End Type="Katapoka.DAO.Atividade_Tb" Role="Atividade_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.AtividadeLog_Tb" Role="AtividadeLog_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atividade_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Principal>
+            <Dependent Role="AtividadeLog_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Tempo_Atividade">
+          <End Type="Katapoka.DAO.Atividade_Tb" Role="Atividade_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.AtividadeApontamentoTempo_Tb" Role="AtividadeApontamentoTempo_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atividade_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Principal>
+            <Dependent Role="AtividadeApontamentoTempo_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AtividadeApontamentoTempo_Tb_Usuario_Tb">
+          <End Type="Katapoka.DAO.Usuario_Tb" Role="Usuario_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.AtividadeApontamentoTempo_Tb" Role="AtividadeApontamentoTempo_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="AtividadeApontamentoTempo_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ProjetoAtividadeUsuario_Usuario">
+          <End Type="Katapoka.DAO.Usuario_Tb" Role="Usuario_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.AtividadeUsuario_Tb" Role="AtividadeUsuario_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="AtividadeUsuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ProjetoAtividadeUsuario_UsuarioCriacao">
+          <End Type="Katapoka.DAO.Usuario_Tb" Role="Usuario_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.AtividadeUsuario_Tb" Role="AtividadeUsuario_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="AtividadeUsuario_Tb">
+              <PropertyRef Name="IdUsuarioCriacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Bairro_Cidade">
+          <End Type="Katapoka.DAO.Cidade_Tb" Role="Cidade_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.Bairro_Tb" Role="Bairro_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cidade_Tb">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="Bairro_Tb">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Endereco_Bairro">
+          <End Type="Katapoka.DAO.Bairro_Tb" Role="Bairro_Tb" Multiplicity="0..1" />
+          <End Type="Katapoka.DAO.Endereco_Tb" Role="Endereco_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bairro_Tb">
+              <PropertyRef Name="IdBairro" />
+            </Principal>
+            <Dependent Role="Endereco_Tb">
+              <PropertyRef Name="IdBairro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CargoTipoAtividade_Tb_Cargo_Tb">
+          <End Type="Katapoka.DAO.Cargo_Tb" Role="Cargo_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.CargoTipoAtividade_Tb" Role="CargoTipoAtividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo_Tb">
+              <PropertyRef Name="IdCargo" />
+            </Principal>
+            <Dependent Role="CargoTipoAtividade_Tb">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Tb_Cargo_Tb">
+          <End Type="Katapoka.DAO.Cargo_Tb" Role="Cargo_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.Usuario_Tb" Role="Usuario_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo_Tb">
+              <PropertyRef Name="IdCargo" />
+            </Principal>
+            <Dependent Role="Usuario_Tb">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Cidade_UF">
+          <End Type="Katapoka.DAO.UF_Tb" Role="UF_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.Cidade_Tb" Role="Cidade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UF_Tb">
+              <PropertyRef Name="CdUF" />
+            </Principal>
+            <Dependent Role="Cidade_Tb">
+              <PropertyRef Name="CdUF" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Endereco_Cidade">
+          <End Type="Katapoka.DAO.Cidade_Tb" Role="Cidade_Tb" Multiplicity="0..1" />
+          <End Type="Katapoka.DAO.Endereco_Tb" Role="Endereco_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cidade_Tb">
+              <PropertyRef Name="IdCidade" />
+            </Principal>
+            <Dependent Role="Endereco_Tb">
+              <PropertyRef Name="IdCidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Empresa_Contato">
+          <End Type="Katapoka.DAO.Contato_Tb" Role="Contato_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.Empresa_Tb" Role="Empresa_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contato_Tb">
+              <PropertyRef Name="IdContato" />
+            </Principal>
+            <Dependent Role="Empresa_Tb">
+              <PropertyRef Name="IdContato" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Empresa_Endereco">
+          <End Type="Katapoka.DAO.Endereco_Tb" Role="Endereco_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.Empresa_Tb" Role="Empresa_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Endereco_Tb">
+              <PropertyRef Name="IdEndereco" />
+            </Principal>
+            <Dependent Role="Empresa_Tb">
+              <PropertyRef Name="IdEndereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Empresa_UsuarioAprovacao">
+          <End Type="Katapoka.DAO.Usuario_Tb" Role="Usuario_Tb" Multiplicity="0..1" />
+          <End Type="Katapoka.DAO.Empresa_Tb" Role="Empresa_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Empresa_Tb">
+              <PropertyRef Name="IdUsuarioAprovacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Projeto_Empresa">
+          <End Type="Katapoka.DAO.Empresa_Tb" Role="Empresa_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.Projeto_Tb" Role="Projeto_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa_Tb">
+              <PropertyRef Name="IdEmpresa" />
+            </Principal>
+            <Dependent Role="Projeto_Tb">
+              <PropertyRef Name="IdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Projeto_Tb_TipoProjeto_Tb">
+          <End Type="Katapoka.DAO.TipoProjeto_Tb" Role="TipoProjeto_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.Projeto_Tb" Role="Projeto_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoProjeto_Tb">
+              <PropertyRef Name="IdTipoProjeto" />
+            </Principal>
+            <Dependent Role="Projeto_Tb">
+              <PropertyRef Name="IdTipoProjeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Projeto_UsuarioCriacao">
+          <End Type="Katapoka.DAO.Usuario_Tb" Role="Usuario_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.Projeto_Tb" Role="Projeto_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="Projeto_Tb">
+              <PropertyRef Name="IdUsuarioCriacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProjetoHistorico_Tb_Projeto_Tb">
+          <End Type="Katapoka.DAO.Projeto_Tb" Role="Projeto_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.ProjetoInteracao_Tb" Role="ProjetoInteracao_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projeto_Tb">
+              <PropertyRef Name="IdProjeto" />
+            </Principal>
+            <Dependent Role="ProjetoInteracao_Tb">
+              <PropertyRef Name="IdProjeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProjetoHistorico_Tb_Usuario_Tb">
+          <End Type="Katapoka.DAO.Usuario_Tb" Role="Usuario_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.ProjetoInteracao_Tb" Role="ProjetoInteracao_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuario" />
+            </Principal>
+            <Dependent Role="ProjetoInteracao_Tb">
+              <PropertyRef Name="IdUsuarioCriacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoProjetoTipoAtividade_Tb_TipoProjeto_Tb">
+          <End Type="Katapoka.DAO.TipoProjeto_Tb" Role="TipoProjeto_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.TipoProjetoTipoAtividade_Tb" Role="TipoProjetoTipoAtividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoProjeto_Tb">
+              <PropertyRef Name="IdTipoProjeto" />
+            </Principal>
+            <Dependent Role="TipoProjetoTipoAtividade_Tb">
+              <PropertyRef Name="IdTipoProjeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Usuario_UsuarioNivel">
+          <End Type="Katapoka.DAO.UsuarioNivel_Tb" Role="UsuarioNivel_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.Usuario_Tb" Role="Usuario_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsuarioNivel_Tb">
+              <PropertyRef Name="IdUsuarioNivel" />
+            </Principal>
+            <Dependent Role="Usuario_Tb">
+              <PropertyRef Name="IdUsuarioNivel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Atividade_Tb_Atividade_Tb">
+          <End Type="Katapoka.DAO.Atividade_Tb" Role="Atividade_Tb" Multiplicity="0..1" />
+          <End Type="Katapoka.DAO.Atividade_Tb" Role="Atividade_Tb1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atividade_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Principal>
+            <Dependent Role="Atividade_Tb1">
+              <PropertyRef Name="IdAtividadePredecessora" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AtividadeTag_Tb">
+          <Key>
+            <PropertyRef Name="IdAtividadeTag" />
+          </Key>
+          <Property Type="Int32" Name="IdAtividadeTag" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdAtividade" Nullable="false" />
+          <Property Type="Int32" Name="IdTag" Nullable="false" />
+          <NavigationProperty Name="Atividade_Tb" Relationship="Katapoka.DAO.FK_AtividadeTag_Tb_Atividade_Tb" FromRole="AtividadeTag_Tb" ToRole="Atividade_Tb" />
+          <NavigationProperty Name="Tag_Tb" Relationship="Katapoka.DAO.FK_AtividadeTag_Tb_Tag_Tb" FromRole="AtividadeTag_Tb" ToRole="Tag_Tb" />
+        </EntityType>
+        <EntityType Name="Tag_Tb">
+          <Key>
+            <PropertyRef Name="IdTag" />
+          </Key>
+          <Property Type="Int32" Name="IdTag" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DsTag" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AtividadeTag_Tb" Relationship="Katapoka.DAO.FK_AtividadeTag_Tb_Tag_Tb" FromRole="Tag_Tb" ToRole="AtividadeTag_Tb" />
+          <NavigationProperty Name="TipoAtividadeTag_Tb" Relationship="Katapoka.DAO.FK_TipoAtividadeTag_Tb_Tag_Tb" FromRole="Tag_Tb" ToRole="TipoAtividadeTag_Tb" />
+        </EntityType>
+        <Association Name="FK_AtividadeTag_Tb_Atividade_Tb">
+          <End Type="Katapoka.DAO.Atividade_Tb" Role="Atividade_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.AtividadeTag_Tb" Role="AtividadeTag_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Atividade_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Principal>
+            <Dependent Role="AtividadeTag_Tb">
+              <PropertyRef Name="IdAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AtividadeTag_Tb_Tag_Tb">
+          <End Type="Katapoka.DAO.Tag_Tb" Role="Tag_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.AtividadeTag_Tb" Role="AtividadeTag_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tag_Tb">
+              <PropertyRef Name="IdTag" />
+            </Principal>
+            <Dependent Role="AtividadeTag_Tb">
+              <PropertyRef Name="IdTag" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TipoAtividade_Tb">
+          <Key>
+            <PropertyRef Name="IdTipoAtividade" />
+          </Key>
+          <Property Type="Int32" Name="IdTipoAtividade" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DsTituloAtividade" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="QtTempoEstimado" Nullable="false" Precision="10" Scale="3" />
+          <Property Type="String" Name="DsAtividade" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Atividade_Tb" Relationship="Katapoka.DAO.FK_Atividade_Tb_TipoAtividade_Tb" FromRole="TipoAtividade_Tb" ToRole="Atividade_Tb" />
+          <NavigationProperty Name="CargoTipoAtividade_Tb" Relationship="Katapoka.DAO.FK_CargoTipoAtividade_Tb_TipoAtividade_Tb" FromRole="TipoAtividade_Tb" ToRole="CargoTipoAtividade_Tb" />
+          <NavigationProperty Name="TipoProjetoTipoAtividade_Tb" Relationship="Katapoka.DAO.FK_TipoProjetoTipoAtividade_Tb_TipoAtividade_Tb" FromRole="TipoAtividade_Tb" ToRole="TipoProjetoTipoAtividade_Tb" />
+          <NavigationProperty Name="TipoProjetoTipoAtividadePredecessora_Tb" Relationship="Katapoka.DAO.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb" FromRole="TipoAtividade_Tb" ToRole="TipoProjetoTipoAtividadePredecessora_Tb" />
+          <NavigationProperty Name="TipoProjetoTipoAtividadePredecessoraPredecessora_Tb" Relationship="Katapoka.DAO.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb1" FromRole="TipoAtividade_Tb" ToRole="TipoProjetoTipoAtividadePredecessora_Tb" />
+          <NavigationProperty Name="TipoAtividadeTag_Tb" Relationship="Katapoka.DAO.FK_TipoAtividadeTag_Tb_TipoAtividade_Tb" FromRole="TipoAtividade_Tb" ToRole="TipoAtividadeTag_Tb" />
+        </EntityType>
+        <EntityType Name="TipoProjetoTipoAtividadePredecessora_Tb">
+          <Key>
+            <PropertyRef Name="IdTipoProjetoTipoAtividadePredecessora" />
+          </Key>
+          <Property Type="Int32" Name="IdTipoProjetoTipoAtividadePredecessora" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdTipoProjeto" Nullable="false" />
+          <Property Type="Int32" Name="IdTipoAtividade" Nullable="false" />
+          <Property Type="Int32" Name="IdTipoAtividadePredecessora" />
+          <NavigationProperty Name="TipoAtividade_Tb" Relationship="Katapoka.DAO.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb" FromRole="TipoProjetoTipoAtividadePredecessora_Tb" ToRole="TipoAtividade_Tb" />
+          <NavigationProperty Name="TipoAtividadePredecessora_Tb" Relationship="Katapoka.DAO.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb1" FromRole="TipoProjetoTipoAtividadePredecessora_Tb" ToRole="TipoAtividade_Tb" />
+          <NavigationProperty Name="TipoProjeto_Tb" Relationship="Katapoka.DAO.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoProjeto_Tb" FromRole="TipoProjetoTipoAtividadePredecessora_Tb" ToRole="TipoProjeto_Tb" />
+        </EntityType>
+        <Association Name="FK_Atividade_Tb_TipoAtividade_Tb">
+          <End Type="Katapoka.DAO.TipoAtividade_Tb" Role="TipoAtividade_Tb" Multiplicity="0..1" />
+          <End Type="Katapoka.DAO.Atividade_Tb" Role="Atividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Principal>
+            <Dependent Role="Atividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CargoTipoAtividade_Tb_TipoAtividade_Tb">
+          <End Type="Katapoka.DAO.TipoAtividade_Tb" Role="TipoAtividade_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.CargoTipoAtividade_Tb" Role="CargoTipoAtividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Principal>
+            <Dependent Role="CargoTipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoProjetoTipoAtividade_Tb_TipoAtividade_Tb">
+          <End Type="Katapoka.DAO.TipoAtividade_Tb" Role="TipoAtividade_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.TipoProjetoTipoAtividade_Tb" Role="TipoProjetoTipoAtividade_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Principal>
+            <Dependent Role="TipoProjetoTipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb">
+          <End Type="Katapoka.DAO.TipoAtividade_Tb" Role="TipoAtividade_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.TipoProjetoTipoAtividadePredecessora_Tb" Role="TipoProjetoTipoAtividadePredecessora_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Principal>
+            <Dependent Role="TipoProjetoTipoAtividadePredecessora_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb1">
+          <End Type="Katapoka.DAO.TipoAtividade_Tb" Role="TipoAtividade_Tb" Multiplicity="0..1" />
+          <End Type="Katapoka.DAO.TipoProjetoTipoAtividadePredecessora_Tb" Role="TipoProjetoTipoAtividadePredecessora_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Principal>
+            <Dependent Role="TipoProjetoTipoAtividadePredecessora_Tb">
+              <PropertyRef Name="IdTipoAtividadePredecessora" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoProjeto_Tb">
+          <End Type="Katapoka.DAO.TipoProjeto_Tb" Role="TipoProjeto_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.TipoProjetoTipoAtividadePredecessora_Tb" Role="TipoProjetoTipoAtividadePredecessora_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoProjeto_Tb">
+              <PropertyRef Name="IdTipoProjeto" />
+            </Principal>
+            <Dependent Role="TipoProjetoTipoAtividadePredecessora_Tb">
+              <PropertyRef Name="IdTipoProjeto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TipoAtividadeTag_Tb">
+          <Key>
+            <PropertyRef Name="IdTipoAtividadeTag" />
+          </Key>
+          <Property Type="Int32" Name="IdTipoAtividadeTag" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdTipoAtividade" Nullable="false" />
+          <Property Type="Int32" Name="IdTag" Nullable="false" />
+          <NavigationProperty Name="Tag_Tb" Relationship="Katapoka.DAO.FK_TipoAtividadeTag_Tb_Tag_Tb" FromRole="TipoAtividadeTag_Tb" ToRole="Tag_Tb" />
+          <NavigationProperty Name="TipoAtividade_Tb" Relationship="Katapoka.DAO.FK_TipoAtividadeTag_Tb_TipoAtividade_Tb" FromRole="TipoAtividadeTag_Tb" ToRole="TipoAtividade_Tb" />
+        </EntityType>
+        <Association Name="FK_TipoAtividadeTag_Tb_Tag_Tb">
+          <End Type="Katapoka.DAO.Tag_Tb" Role="Tag_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.TipoAtividadeTag_Tb" Role="TipoAtividadeTag_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tag_Tb">
+              <PropertyRef Name="IdTag" />
+            </Principal>
+            <Dependent Role="TipoAtividadeTag_Tb">
+              <PropertyRef Name="IdTag" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoAtividadeTag_Tb_TipoAtividade_Tb">
+          <End Type="Katapoka.DAO.TipoAtividade_Tb" Role="TipoAtividade_Tb" Multiplicity="1" />
+          <End Type="Katapoka.DAO.TipoAtividadeTag_Tb" Role="TipoAtividadeTag_Tb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAtividade_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Principal>
+            <Dependent Role="TipoAtividadeTag_Tb">
+              <PropertyRef Name="IdTipoAtividade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuanticaDAOStoreContainer" CdmEntityContainer="QuanticaEntities">
+          <EntitySetMapping Name="AreaAtuacao_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.AreaAtuacao_Tb">
+              <MappingFragment StoreEntitySet="AreaAtuacao_Tb">
+                <ScalarProperty Name="DsAreaAtuacao" ColumnName="DsAreaAtuacao" />
+                <ScalarProperty Name="IdAreaAtuacao" ColumnName="IdAreaAtuacao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Atividade_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.Atividade_Tb">
+              <MappingFragment StoreEntitySet="Atividade_Tb">
+                <ScalarProperty Name="FlStatus" ColumnName="FlStatus" />
+                <ScalarProperty Name="IdAtividadePredecessora" ColumnName="IdAtividadePredecessora" />
+                <ScalarProperty Name="IdTipoAtividade" ColumnName="IdTipoAtividade" />
+                <ScalarProperty Name="DtCriacao" ColumnName="DtCriacao" />
+                <ScalarProperty Name="IdUsuarioCriacao" ColumnName="IdUsuarioCriacao" />
+                <ScalarProperty Name="DsAtividade" ColumnName="DsAtividade" />
+                <ScalarProperty Name="DtTermino" ColumnName="DtTermino" />
+                <ScalarProperty Name="DtInicio" ColumnName="DtInicio" />
+                <ScalarProperty Name="VrCompletoPorcentagem" ColumnName="VrCompletoPorcentagem" />
+                <ScalarProperty Name="QtTempoExecutado" ColumnName="QtTempoExecutado" />
+                <ScalarProperty Name="QtTempoEstimado" ColumnName="QtTempoEstimado" />
+                <ScalarProperty Name="DsTituloAtividade" ColumnName="DsTituloAtividade" />
+                <ScalarProperty Name="IdProjeto" ColumnName="IdProjeto" />
+                <ScalarProperty Name="IdAtividade" ColumnName="IdAtividade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AtividadeApontamentoTempo_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.AtividadeApontamentoTempo_Tb">
+              <MappingFragment StoreEntitySet="AtividadeApontamentoTempo_Tb">
+                <ScalarProperty Name="DtTermino" ColumnName="DtTermino" />
+                <ScalarProperty Name="DtInicio" ColumnName="DtInicio" />
+                <ScalarProperty Name="IdAtividade" ColumnName="IdAtividade" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdAtividadeApontamentoTempo" ColumnName="IdAtividadeApontamentoTempo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AtividadeLog_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.AtividadeLog_Tb">
+              <MappingFragment StoreEntitySet="AtividadeLog_Tb">
+                <ScalarProperty Name="DtAlteracao" ColumnName="DtAlteracao" />
+                <ScalarProperty Name="IdUsuarioAlteracao" ColumnName="IdUsuarioAlteracao" />
+                <ScalarProperty Name="DsMotivo" ColumnName="DsMotivo" />
+                <ScalarProperty Name="DtTerminoNovo" ColumnName="DtTerminoNovo" />
+                <ScalarProperty Name="DtInicioNovo" ColumnName="DtInicioNovo" />
+                <ScalarProperty Name="DtTerminoAntigo" ColumnName="DtTerminoAntigo" />
+                <ScalarProperty Name="DtInicioAntigo" ColumnName="DtInicioAntigo" />
+                <ScalarProperty Name="IdAtividade" ColumnName="IdAtividade" />
+                <ScalarProperty Name="IdAtividadeLog" ColumnName="IdAtividadeLog" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AtividadeUsuario_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.AtividadeUsuario_Tb">
+              <MappingFragment StoreEntitySet="AtividadeUsuario_Tb">
+                <ScalarProperty Name="DtCriacao" ColumnName="DtCriacao" />
+                <ScalarProperty Name="IdUsuarioCriacao" ColumnName="IdUsuarioCriacao" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdAtividade" ColumnName="IdAtividade" />
+                <ScalarProperty Name="IdAtividadeUsuario" ColumnName="IdAtividadeUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bairro_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.Bairro_Tb">
+              <MappingFragment StoreEntitySet="Bairro_Tb">
+                <ScalarProperty Name="DsNome" ColumnName="DsNome" />
+                <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+                <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cargo_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.Cargo_Tb">
+              <MappingFragment StoreEntitySet="Cargo_Tb">
+                <ScalarProperty Name="DsCargo" ColumnName="DsCargo" />
+                <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CargoTipoAtividade_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.CargoTipoAtividade_Tb">
+              <MappingFragment StoreEntitySet="CargoTipoAtividade_Tb">
+                <ScalarProperty Name="IdTipoAtividade" ColumnName="IdTipoAtividade" />
+                <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+                <ScalarProperty Name="IdCargoTipoAtividade" ColumnName="IdCargoTipoAtividade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cidade_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.Cidade_Tb">
+              <MappingFragment StoreEntitySet="Cidade_Tb">
+                <ScalarProperty Name="DsNome" ColumnName="DsNome" />
+                <ScalarProperty Name="CdUF" ColumnName="CdUF" />
+                <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contato_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.Contato_Tb">
+              <MappingFragment StoreEntitySet="Contato_Tb">
+                <ScalarProperty Name="DsObservacaoContato" ColumnName="DsObservacaoContato" />
+                <ScalarProperty Name="DsFax" ColumnName="DsFax" />
+                <ScalarProperty Name="DsTelefoneComercial" ColumnName="DsTelefoneComercial" />
+                <ScalarProperty Name="DsTelefoneCelular" ColumnName="DsTelefoneCelular" />
+                <ScalarProperty Name="DsTelefoneResidencial" ColumnName="DsTelefoneResidencial" />
+                <ScalarProperty Name="IdContato" ColumnName="IdContato" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empresa_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.Empresa_Tb">
+              <MappingFragment StoreEntitySet="Empresa_Tb">
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="DsMotivoRejeicao" ColumnName="DsMotivoRejeicao" />
+                <ScalarProperty Name="IdUsuarioAprovacao" ColumnName="IdUsuarioAprovacao" />
+                <ScalarProperty Name="DtAprovacao" ColumnName="DtAprovacao" />
+                <ScalarProperty Name="FlAprovada" ColumnName="FlAprovada" />
+                <ScalarProperty Name="DtCadastro" ColumnName="DtCadastro" />
+                <ScalarProperty Name="DsSite" ColumnName="DsSite" />
+                <ScalarProperty Name="FlAceiteTermo" ColumnName="FlAceiteTermo" />
+                <ScalarProperty Name="DsSumarioEmpresa" ColumnName="DsSumarioEmpresa" />
+                <ScalarProperty Name="DsEmail" ColumnName="DsEmail" />
+                <ScalarProperty Name="NrCnpj" ColumnName="NrCnpj" />
+                <ScalarProperty Name="DsRazaoSocial" ColumnName="DsRazaoSocial" />
+                <ScalarProperty Name="DsNomeFantasia" ColumnName="DsNomeFantasia" />
+                <ScalarProperty Name="IdAreaAtuacao" ColumnName="IdAreaAtuacao" />
+                <ScalarProperty Name="IdContato" ColumnName="IdContato" />
+                <ScalarProperty Name="IdEndereco" ColumnName="IdEndereco" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Endereco_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.Endereco_Tb">
+              <MappingFragment StoreEntitySet="Endereco_Tb">
+                <ScalarProperty Name="DsBairroOutro" ColumnName="DsBairroOutro" />
+                <ScalarProperty Name="IdCidade" ColumnName="IdCidade" />
+                <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+                <ScalarProperty Name="DsComplemento" ColumnName="DsComplemento" />
+                <ScalarProperty Name="NrEndereco" ColumnName="NrEndereco" />
+                <ScalarProperty Name="DsEndereco" ColumnName="DsEndereco" />
+                <ScalarProperty Name="NrCep" ColumnName="NrCep" />
+                <ScalarProperty Name="IdEndereco" ColumnName="IdEndereco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projeto_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.Projeto_Tb">
+              <MappingFragment StoreEntitySet="Projeto_Tb">
+                <ScalarProperty Name="IdTipoProjeto" ColumnName="IdTipoProjeto" />
+                <ScalarProperty Name="DtCriacao" ColumnName="DtCriacao" />
+                <ScalarProperty Name="IdUsuarioCriacao" ColumnName="IdUsuarioCriacao" />
+                <ScalarProperty Name="FlStatus" ColumnName="FlStatus" />
+                <ScalarProperty Name="DsCodigoReferencia" ColumnName="DsCodigoReferencia" />
+                <ScalarProperty Name="DtTerminoEstimado" ColumnName="DtTerminoEstimado" />
+                <ScalarProperty Name="DtInicioEstimado" ColumnName="DtInicioEstimado" />
+                <ScalarProperty Name="DsNome" ColumnName="DsNome" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdProjeto" ColumnName="IdProjeto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProjetoInteracao_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.ProjetoInteracao_Tb">
+              <MappingFragment StoreEntitySet="ProjetoInteracao_Tb">
+                <ScalarProperty Name="IdUsuarioCriacao" ColumnName="IdUsuarioCriacao" />
+                <ScalarProperty Name="DtCriacao" ColumnName="DtCriacao" />
+                <ScalarProperty Name="DsHistorico" ColumnName="DsHistorico" />
+                <ScalarProperty Name="IdProjeto" ColumnName="IdProjeto" />
+                <ScalarProperty Name="IdProjetoInteracao" ColumnName="IdProjetoInteracao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Katapoka.DAO.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoProjeto_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.TipoProjeto_Tb">
+              <MappingFragment StoreEntitySet="TipoProjeto_Tb">
+                <ScalarProperty Name="DsTipo" ColumnName="DsTipo" />
+                <ScalarProperty Name="IdTipoProjeto" ColumnName="IdTipoProjeto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoProjetoTipoAtividade_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.TipoProjetoTipoAtividade_Tb">
+              <MappingFragment StoreEntitySet="TipoProjetoTipoAtividade_Tb">
+                <ScalarProperty Name="IdTipoAtividade" ColumnName="IdTipoAtividade" />
+                <ScalarProperty Name="IdTipoProjeto" ColumnName="IdTipoProjeto" />
+                <ScalarProperty Name="IdTipoProjetoTipoAtividade" ColumnName="IdTipoProjetoTipoAtividade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UF_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.UF_Tb">
+              <MappingFragment StoreEntitySet="UF_Tb">
+                <ScalarProperty Name="DsUF" ColumnName="DsUF" />
+                <ScalarProperty Name="CdUF" ColumnName="CdUF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.Usuario_Tb">
+              <MappingFragment StoreEntitySet="Usuario_Tb">
+                <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+                <ScalarProperty Name="DsSenha" ColumnName="DsSenha" />
+                <ScalarProperty Name="DsHashLogin" ColumnName="DsHashLogin" />
+                <ScalarProperty Name="DtValidadeLogin" ColumnName="DtValidadeLogin" />
+                <ScalarProperty Name="DsEmail" ColumnName="DsEmail" />
+                <ScalarProperty Name="DsNome" ColumnName="DsNome" />
+                <ScalarProperty Name="IdUsuarioNivel" ColumnName="IdUsuarioNivel" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioNivel_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.UsuarioNivel_Tb">
+              <MappingFragment StoreEntitySet="UsuarioNivel_Tb">
+                <ScalarProperty Name="DsNivel" ColumnName="DsNivel" />
+                <ScalarProperty Name="IdUsuarioNivel" ColumnName="IdUsuarioNivel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AtividadeTag_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.AtividadeTag_Tb">
+              <MappingFragment StoreEntitySet="AtividadeTag_Tb">
+                <ScalarProperty Name="IdTag" ColumnName="IdTag" />
+                <ScalarProperty Name="IdAtividade" ColumnName="IdAtividade" />
+                <ScalarProperty Name="IdAtividadeTag" ColumnName="IdAtividadeTag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tag_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.Tag_Tb">
+              <MappingFragment StoreEntitySet="Tag_Tb">
+                <ScalarProperty Name="DsTag" ColumnName="DsTag" />
+                <ScalarProperty Name="IdTag" ColumnName="IdTag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoAtividade_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.TipoAtividade_Tb">
+              <MappingFragment StoreEntitySet="TipoAtividade_Tb">
+                <ScalarProperty Name="DsAtividade" ColumnName="DsAtividade" />
+                <ScalarProperty Name="QtTempoEstimado" ColumnName="QtTempoEstimado" />
+                <ScalarProperty Name="DsTituloAtividade" ColumnName="DsTituloAtividade" />
+                <ScalarProperty Name="IdTipoAtividade" ColumnName="IdTipoAtividade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoProjetoTipoAtividadePredecessora_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.TipoProjetoTipoAtividadePredecessora_Tb">
+              <MappingFragment StoreEntitySet="TipoProjetoTipoAtividadePredecessora_Tb">
+                <ScalarProperty Name="IdTipoAtividadePredecessora" ColumnName="IdTipoAtividadePredecessora" />
+                <ScalarProperty Name="IdTipoAtividade" ColumnName="IdTipoAtividade" />
+                <ScalarProperty Name="IdTipoProjeto" ColumnName="IdTipoProjeto" />
+                <ScalarProperty Name="IdTipoProjetoTipoAtividadePredecessora" ColumnName="IdTipoProjetoTipoAtividadePredecessora" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoAtividadeTag_Tb">
+            <EntityTypeMapping TypeName="Katapoka.DAO.TipoAtividadeTag_Tb">
+              <MappingFragment StoreEntitySet="TipoAtividadeTag_Tb">
+                <ScalarProperty Name="IdTag" ColumnName="IdTag" />
+                <ScalarProperty Name="IdTipoAtividade" ColumnName="IdTipoAtividade" />
+                <ScalarProperty Name="IdTipoAtividadeTag" ColumnName="IdTipoAtividadeTag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

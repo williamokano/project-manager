@@ -1,0 +1,29 @@
+﻿body
+{
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu
+{
+    display: block;
+    position: static;
+    margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn
+{
+    margin: 5px 0;
+}
+
+.dados-filtro
+{
+    background: #e8e8e8;
+    padding: 5px;
+    border-radius: 3px 4px;
+}
+
+.dados-filtro .botao-filtro
+{
+    margin-top: 25px;
+}

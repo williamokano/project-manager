@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<%@ Register TagPrefix="Katapoka" TagName="Alerta" Src="~/UserControl/ModalAlert.ascx" %>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>
+        <asp:Literal ID="ltrTituloMasterPage" runat="server"></asp:Literal></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- Bootstrap theme -->
+    <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="Css/Core/Loader.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/theme.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="assets/js/jquery.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- App main script, should be included in all pages -->
+    <script type="text/javascript" src="Scripts/Core/Main.js"></script>
+    <asp:ContentPlaceHolder runat="server" ID="HeaderContent">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Bootstrap theme</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="Default.aspx">Início</a></li>
+                        <li><a href="ListarEmpresas.aspx">Empresas</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projetos <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ListarProjetos.aspx">Projetos</a></li>
+                                <li><a href="ListarTiposProjeto.aspx">Tipos de Projeto</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="ListarAtividades.aspx">Atividades</a></li>
+                        <li><a href="ListarUsuarios.aspx">Usuários</a></li>
+                        <li><a href="Sair.aspx">Sair</a></li>
+                        <!--li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li-->
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!--div class="col-md-2">
+                    <div class="well sidebar-nav" role="complementary">
+                        <ul class="nav">
+                            <li class=""><a href="ListarEmpresas.aspx">Empresas</a></li>
+                            <li class=""><a href="ListarProjetos.aspx">Projetos</a></li>
+                            <li class=""><a href="ListarAtividades.aspx">Atividades</a></li>
+                            <li class=""><a href="ListarUsuarios.aspx">Usuários</a></li>
+                        </ul>
+                    </div>
+                </div-->
+                <div class="col-md-12" role="main">
+                    <div class="container theme-showcase">
+                        <asp:ContentPlaceHolder runat="server" ID="BodyContent">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <Katapoka:Alerta ID="QNAlert_1" runat="server" />
+    <asp:ContentPlaceHolder runat="server" ID="FooterContent">
+    </asp:ContentPlaceHolder>
+    <div id="ajaxLoaderFullScreen">
+        <img class="loader-gif" src="Images/ajax-loader.gif" alt="Loader" title="Loader" /></div>
+</body>
+</html>

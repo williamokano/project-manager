@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e9be2629a70a4b04aeff42f9e4314214" Name="Diagram1" ZoomLevel="101">
+        <EntityTypeShape EntityType="Katapoka.DAO.AreaAtuacao_Tb" Width="1.5" PointX="9" PointY="5.5" />
+        <EntityTypeShape EntityType="Katapoka.DAO.Atividade_Tb" Width="1.5" PointX="8.25" PointY="8.5" />
+        <EntityTypeShape EntityType="Katapoka.DAO.AtividadeApontamentoTempo_Tb" Width="1.5" PointX="13.5" PointY="9.625" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_Tempo_Atividade" />
+        <EntityTypeShape EntityType="Katapoka.DAO.AtividadeLog_Tb" Width="1.5" PointX="10.5" PointY="14.375" />
+        <AssociationConnector Association="Katapoka.DAO.FK_ProjetoAtividadeHistorico" />
+        <EntityTypeShape EntityType="Katapoka.DAO.AtividadeUsuario_Tb" Width="1.5" PointX="13.5" PointY="5.125" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_ProjetoAtividade_Usuarios" />
+        <EntityTypeShape EntityType="Katapoka.DAO.Bairro_Tb" Width="1.5" PointX="6.75" PointY="19.5" />
+        <EntityTypeShape EntityType="Katapoka.DAO.Cargo_Tb" Width="1.5" PointX="0.75" PointY="9.875" />
+        <EntityTypeShape EntityType="Katapoka.DAO.CargoTipoAtividade_Tb" Width="1.5" PointX="3" PointY="9.75" />
+        <AssociationConnector Association="Katapoka.DAO.FK_CargoTipoAtividade_Tb_Cargo_Tb" />
+        <EntityTypeShape EntityType="Katapoka.DAO.Cidade_Tb" Width="1.5" PointX="4.5" PointY="19.375" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_Bairro_Cidade" />
+        <EntityTypeShape EntityType="Katapoka.DAO.Contato_Tb" Width="1.5" PointX="9" PointY="1.875" />
+        <EntityTypeShape EntityType="Katapoka.DAO.Empresa_Tb" Width="1.5" PointX="11.25" PointY="8.125" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_Empresa_AreaAtuacao" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_Empresa_Contato" />
+        <EntityTypeShape EntityType="Katapoka.DAO.Endereco_Tb" Width="1.5" PointX="9" PointY="19" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_Endereco_Bairro" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_Endereco_Cidade" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_Empresa_Endereco" />
+        <EntityTypeShape EntityType="Katapoka.DAO.Projeto_Tb" Width="1.5" PointX="16.5" PointY="8.875" />
+        <AssociationConnector Association="Katapoka.DAO.FK_Atividade_Tb_Projeto_Tb" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_Projeto_Empresa" />
+        <EntityTypeShape EntityType="Katapoka.DAO.ProjetoInteracao_Tb" Width="1.5" PointX="18.75" PointY="9.625" />
+        <AssociationConnector Association="Katapoka.DAO.FK_ProjetoHistorico_Tb_Projeto_Tb" />
+        <EntityTypeShape EntityType="Katapoka.DAO.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Katapoka.DAO.TipoProjeto_Tb" Width="1.5" PointX="14.25" PointY="2.25" />
+        <AssociationConnector Association="Katapoka.DAO.FK_Projeto_Tb_TipoProjeto_Tb" />
+        <EntityTypeShape EntityType="Katapoka.DAO.TipoProjetoTipoAtividade_Tb" Width="1.5" PointX="16.5" PointY="4.25" />
+        <AssociationConnector Association="Katapoka.DAO.FK_TipoProjetoTipoAtividade_Tb_TipoProjeto_Tb" />
+        <EntityTypeShape EntityType="Katapoka.DAO.UF_Tb" Width="1.5" PointX="2.25" PointY="19.75" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_Cidade_UF" />
+        <EntityTypeShape EntityType="Katapoka.DAO.Usuario_Tb" Width="1.5" PointX="6" PointY="8.625" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_ProjetoAtividade_UsuarioCriacao" />
+        <AssociationConnector Association="Katapoka.DAO.FK_AtividadeApontamentoTempo_Tb_Usuario_Tb" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_ProjetoAtividadeUsuario_Usuario" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_ProjetoAtividadeUsuario_UsuarioCriacao" />
+        <AssociationConnector Association="Katapoka.DAO.FK_Usuario_Tb_Cargo_Tb" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_Empresa_UsuarioAprovacao" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_Projeto_UsuarioCriacao" />
+        <AssociationConnector Association="Katapoka.DAO.FK_ProjetoHistorico_Tb_Usuario_Tb" />
+        <EntityTypeShape EntityType="Katapoka.DAO.UsuarioNivel_Tb" Width="1.5" PointX="3.75" PointY="7" />
+        <AssociationConnector Association="Katapoka.DAO.Fk_Usuario_UsuarioNivel" />
+        <AssociationConnector Association="Katapoka.DAO.FK_Atividade_Tb_Atividade_Tb" />
+        <EntityTypeShape EntityType="Katapoka.DAO.AtividadeTag_Tb" Width="1.5" PointX="4.375" PointY="13.25" />
+        <EntityTypeShape EntityType="Katapoka.DAO.Tag_Tb" Width="1.5" PointX="4.375" PointY="16.125" />
+        <AssociationConnector Association="Katapoka.DAO.FK_AtividadeTag_Tb_Atividade_Tb" />
+        <AssociationConnector Association="Katapoka.DAO.FK_AtividadeTag_Tb_Tag_Tb" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Katapoka.DAO.TipoAtividade_Tb" Width="1.5" PointX="0.875" PointY="6.125" />
+        <EntityTypeShape EntityType="Katapoka.DAO.TipoProjetoTipoAtividadePredecessora_Tb" Width="2.25" PointX="3.5" PointY="2.125" />
+        <AssociationConnector Association="Katapoka.DAO.FK_Atividade_Tb_TipoAtividade_Tb" />
+        <AssociationConnector Association="Katapoka.DAO.FK_CargoTipoAtividade_Tb_TipoAtividade_Tb" />
+        <AssociationConnector Association="Katapoka.DAO.FK_TipoProjetoTipoAtividade_Tb_TipoAtividade_Tb" />
+        <AssociationConnector Association="Katapoka.DAO.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb" />
+        <AssociationConnector Association="Katapoka.DAO.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoAtividade_Tb1" />
+        <AssociationConnector Association="Katapoka.DAO.FK_TipoProjetoTipoAtividadePredecessora_Tb_TipoProjeto_Tb" />
+        <EntityTypeShape EntityType="Katapoka.DAO.TipoAtividadeTag_Tb" Width="1.5" PointX="0.875" PointY="16.125" />
+        <AssociationConnector Association="Katapoka.DAO.FK_TipoAtividadeTag_Tb_Tag_Tb" />
+        <AssociationConnector Association="Katapoka.DAO.FK_TipoAtividadeTag_Tb_TipoAtividade_Tb" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

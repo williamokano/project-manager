@@ -1,0 +1,21 @@
+﻿#ajaxLoaderFullScreen
+{ 
+    display:none;
+    background-image: url(../../Images/ajax-loader-bg.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+#ajaxLoaderFullScreen .loader-gif
+{
+    left: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
+    position: absolute;
+    top: 50%;
+}

@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Katapoka.DAO", "Katapoka.DAO\Katapoka.DAO.csproj", "{982CF39A-707C-4C63-A473-FD714C5E508D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Katapoka.BLL", "Katapoka.BLL\Katapoka.BLL.csproj", "{91120073-B387-4DB2-BFA2-AB29360DC4AD}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Katapoka.WebUI", "Katapoka.WebUI\", "{2CCF2498-461E-4696-B700-710BDC464D46}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{91120073-b387-4db2-bfa2-ab29360dc4ad}|Katapoka.BLL.dll;{982cf39a-707c-4c63-a473-fd714c5e508d}|Katapoka.DAO.dll;{740ad57b-8c17-4314-91da-7278ef02cb1d}|AjaxReverso.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Katapoka.WebUI"
+		Debug.AspNetCompiler.PhysicalPath = "Katapoka.WebUI\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Katapoka.WebUI\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Katapoka.WebUI"
+		Release.AspNetCompiler.PhysicalPath = "Katapoka.WebUI\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Katapoka.WebUI\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "666"
+		VWDDynamicPort = "false"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxReverso", "AjaxReverso\AjaxReverso.csproj", "{740AD57B-8C17-4314-91DA-7278EF02CB1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{982CF39A-707C-4C63-A473-FD714C5E508D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{982CF39A-707C-4C63-A473-FD714C5E508D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{982CF39A-707C-4C63-A473-FD714C5E508D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{982CF39A-707C-4C63-A473-FD714C5E508D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91120073-B387-4DB2-BFA2-AB29360DC4AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91120073-B387-4DB2-BFA2-AB29360DC4AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91120073-B387-4DB2-BFA2-AB29360DC4AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91120073-B387-4DB2-BFA2-AB29360DC4AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CCF2498-461E-4696-B700-710BDC464D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CCF2498-461E-4696-B700-710BDC464D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CCF2498-461E-4696-B700-710BDC464D46}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CCF2498-461E-4696-B700-710BDC464D46}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{740AD57B-8C17-4314-91DA-7278EF02CB1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740AD57B-8C17-4314-91DA-7278EF02CB1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740AD57B-8C17-4314-91DA-7278EF02CB1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{740AD57B-8C17-4314-91DA-7278EF02CB1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
